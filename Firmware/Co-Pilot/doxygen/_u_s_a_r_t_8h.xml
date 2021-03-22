@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_u_s_a_r_t_8h">
+    <title>USART.h File Reference</title>
+    <programlisting>#include &quot;micro_config.h&quot;</programlisting>
+<para>Include dependency diagram for USART.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_u_s_a_r_t_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for USART.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_u_s_a_r_t_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Macros</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_u_s_a_r_t_8h_1aa42a34d8f17233661a75fe8fc1235e49">AS</link> 0</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_u_s_a_r_t_8h_1af933676109efed7ab34cea71d748a517">S</link> 1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_u_s_a_r_t_8h_1a9309d15f17c3a7c7885a8ad2fbe3fc5f">NORMAL_SPEED</link> 0</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_u_s_a_r_t_8h_1ab240dfe3d1c6c2108bc086ebd4669f49">DOUBLE_SPEED</link> 1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_u_s_a_r_t_8h_1a6e39c5c443322398878f10e0f1e6f023">NO_PARITY</link> 0</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_u_s_a_r_t_8h_1a30a963ff1432e4cfbdd83e74045ef142">EVEN_PARITY</link> 2</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_u_s_a_r_t_8h_1a898d7631f24dd6b1deebf808a2214ea2">ODD_PARITY</link> 3</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_u_s_a_r_t_8h_1aad57089e8e6df3db3ddf901c43cc6972">USART_init</link> (
+uint8 umode, uint8 u2x, uint8 ch_size, uint8 parity_bit, uint8 stop_bit)<para><emphasis>initializes the USART interface</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_u_s_a_r_t_8h_1a0826b25854bf7ff20dff32cd4b9d0231">USART_set_baudrate</link> (
+uint16 baudrate)<para><emphasis>sets the baud rate for the USART interface</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_u_s_a_r_t_8h_1a9477920a260c72bf21f2c5e8a06bab20">USART_enable</link> (
+void )<para><emphasis>enables the USART interface</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_u_s_a_r_t_8h_1a9c2ea9ba29262272148b0a03fb3bf2f5">USART_Transmit_chr</link> (
+char data)<para><emphasis>transmits 8-bit data</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_u_s_a_r_t_8h_1a559d0ceb6f5cfc1e928269089cf48ec7">USART_Transmit_str</link> (
+const char * data)<para><emphasis>transmits a string of 8-bit data</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>char <link linkend="_u_s_a_r_t_8h_1a2d72172472c9d4b933ea0679a28134ed">USART_Receive_chr</link> (
+void )<para><emphasis>receives 8-bit data</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>char * <link linkend="_u_s_a_r_t_8h_1ac493d991dea8232bd95474a81f4a29be">USART_Receive_str</link> (
+void )<para><emphasis>receives a string of 8-bit data</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>This driver supports interfacing any device that supports serial communication via USART interface; baud rate, data frame, parity check and number of stop bits can be set according to each system. </para>
+
+<para><formalpara><title>Author: </title>
+
+<para>Loay Ashraf </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>1.0.0 </para>
+</formalpara>
+<para><link linkend="bug_1_bug000007">Bug</link> 
+<para>no known bugs </para>
+</para><formalpara><title>See also: </title>
+
+<para><link linkend="micro__config_8h">micro_config.h</link> </para>
+</formalpara>
+</para>
+    <para>Definition in file D:/Engineering/Software Development/Embedded/AVR/Projects/Car_Bluetooth/Car_Bluetooth/USART.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+12 <emphasis class="preprocessor">#ifndef&#32;USART_H_</emphasis>
+13 <emphasis class="preprocessor">#define&#32;USART_H_</emphasis>
+14 
+15 <emphasis class="comment">//------------INCLUDE&#32;MCU&#32;CONFIGURATION------------//</emphasis>
+16 
+17 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="micro__config_8h">micro_config.h</link>&quot;</emphasis>
+18 
+19 <emphasis class="comment">//------------DEFINE&#32;CONFIGURATION&#32;PARAMETERS&#32;ABBREVIATIONS------------//</emphasis>
+20 
+21 <emphasis class="preprocessor">#define&#32;AS&#32;0</emphasis>
+22 <emphasis class="preprocessor">#define&#32;S&#32;1</emphasis>
+23 <emphasis class="preprocessor">#define&#32;NORMAL_SPEED&#32;0</emphasis>
+24 <emphasis class="preprocessor">#define&#32;DOUBLE_SPEED&#32;1</emphasis>
+25 <emphasis class="preprocessor">#define&#32;NO_PARITY&#32;0</emphasis>
+26 <emphasis class="preprocessor">#define&#32;EVEN_PARITY&#32;2</emphasis>
+27 <emphasis class="preprocessor">#define&#32;ODD_PARITY&#32;3</emphasis>
+28 
+29 <emphasis class="comment">//------------FUNCTION&#32;PROTOTYPES------------//</emphasis>
+30 
+31 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_u_s_a_r_t_8h_1aad57089e8e6df3db3ddf901c43cc6972">USART_init</link>(uint8&#32;umode,&#32;uint8&#32;u2x,&#32;uint8&#32;ch_size,&#32;uint8&#32;parity_bit,&#32;uint8&#32;stop_bit);
+32 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_u_s_a_r_t_8h_1a0826b25854bf7ff20dff32cd4b9d0231">USART_set_baudrate</link>(uint16&#32;baudrate);
+33 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_u_s_a_r_t_8h_1a9477920a260c72bf21f2c5e8a06bab20">USART_enable</link>(<emphasis class="keywordtype">void</emphasis>);
+34 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_u_s_a_r_t_8h_1a9c2ea9ba29262272148b0a03fb3bf2f5">USART_Transmit_chr</link>(<emphasis class="keywordtype">char</emphasis>&#32;data);
+35 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_u_s_a_r_t_8h_1a559d0ceb6f5cfc1e928269089cf48ec7">USART_Transmit_str</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*&#32;data);
+36 <emphasis class="keywordtype">char</emphasis>&#32;<link linkend="_u_s_a_r_t_8h_1a2d72172472c9d4b933ea0679a28134ed">USART_Receive_chr</link>(<emphasis class="keywordtype">void</emphasis>);
+37 <emphasis class="keywordtype">char</emphasis>&#32;*&#32;<link linkend="_u_s_a_r_t_8h_1ac493d991dea8232bd95474a81f4a29be">USART_Receive_str</link>(<emphasis class="keywordtype">void</emphasis>);
+38 
+39 <emphasis class="preprocessor">#endif&#32;</emphasis><emphasis class="comment">/*&#32;USART_H_&#32;*/</emphasis><emphasis class="preprocessor"></emphasis>
+    </computeroutput></literallayout>
+</section>

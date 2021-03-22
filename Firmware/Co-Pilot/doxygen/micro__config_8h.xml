@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="micro__config_8h">
+    <title>micro_config.h File Reference</title>
+    <programlisting>#include &lt;avr/io.h&gt;</programlisting>
+    <programlisting>#include &lt;stdlib.h&gt;</programlisting>
+    <programlisting>#include &lt;string.h&gt;</programlisting>
+    <programlisting>#include &lt;math.h&gt;</programlisting>
+    <programlisting>#include &lt;util/delay.h&gt;</programlisting>
+    <programlisting>#include &quot;std_types.h&quot;</programlisting>
+<para>Include dependency diagram for micro_config.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="micro__config_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for micro_config.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="micro__config_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Macros</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="micro__config_8h_1a43bafb28b29491ec7f871319b5a3b2f8">F_CPU</link> 12000000UL</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>includes the MCU configuration parameters and required header files </para>
+
+<para><formalpara><title>Author: </title>
+
+<para>Hussam Mostafa </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>1.0.0 </para>
+</formalpara>
+<para><link linkend="bug_1_bug000004">Bug</link> 
+<para>no known bugs </para>
+</para></para>
+    <para>Definition in file D:/Engineering/Software Development/Embedded/AVR/Projects/Car_Bluetooth/Car_Bluetooth/micro_config.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+9 <emphasis class="preprocessor">#ifndef&#32;MICRO_CONFIG_H_</emphasis>
+10 <emphasis class="preprocessor">#define&#32;MICRO_CONFIG_H_</emphasis>
+11 
+12 <emphasis class="comment">//------------DEFINE&#32;CPU&#32;CLOCK&#32;FREQUENCY------------//</emphasis>
+13 
+14 <emphasis class="preprocessor">#ifndef&#32;F_CPU</emphasis>
+15 <emphasis class="preprocessor">#define&#32;F_CPU&#32;12000000UL&#32;//12MHz&#32;Clock&#32;frequency</emphasis>
+16 <emphasis class="preprocessor">#endif</emphasis>
+17 
+18 <emphasis class="comment">//------------INCLUDE&#32;ALL&#32;REQUIRED&#32;HEADER&#32;FILES------------//</emphasis>
+19 
+20 <emphasis class="preprocessor">#include&#32;&lt;avr/io.h&gt;</emphasis>
+21 <emphasis class="preprocessor">#include&#32;&lt;stdlib.h&gt;</emphasis>
+22 <emphasis class="preprocessor">#include&#32;&lt;string.h&gt;</emphasis>
+23 <emphasis class="preprocessor">#include&#32;&lt;math.h&gt;</emphasis>
+24 <emphasis class="preprocessor">#include&#32;&lt;util/delay.h&gt;</emphasis>
+25 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="std__types_8h">std_types.h</link>&quot;</emphasis>
+26 
+27 <emphasis class="preprocessor">#endif&#32;</emphasis><emphasis class="comment">/*&#32;MICRO_CONFIG_H_&#32;*/</emphasis><emphasis class="preprocessor"></emphasis>
+    </computeroutput></literallayout>
+</section>

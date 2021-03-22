@@ -1,0 +1,292 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_u_s_a_r_t_8c">
+    <title>USART.c File Reference</title>
+    <programlisting>#include &quot;USART.h&quot;</programlisting>
+<para>Include dependency diagram for USART.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_u_s_a_r_t_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for USART.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_u_s_a_r_t_8c__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static uint8 <link linkend="_u_s_a_r_t_8c_1a5b5903a2d9dce5a296abb809fd0867f1">mode_flag</link><para><emphasis>indicates the current mode (Asynchronous or Synchronous)</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static uint8 <link linkend="_u_s_a_r_t_8c_1a10a40cda365148ddff6da7622aee2e1c">u2x_flag</link><para><emphasis>indicates the current speed (Normal speed or Double speed)</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static uint8 <link linkend="_u_s_a_r_t_8c_1a1c5be5f9abfd26f4777c65c65625ebce">ninth_bit_flag</link><para><emphasis>indicates if there&apos;s a ninth bit in the data frame</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_u_s_a_r_t_8c_1aad57089e8e6df3db3ddf901c43cc6972">USART_init</link> (
+uint8 umode, uint8 u2x, uint8 ch_size, uint8 parity_bit, uint8 stop_bit)<para><emphasis>initializes the USART interface</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_u_s_a_r_t_8c_1a0826b25854bf7ff20dff32cd4b9d0231">USART_set_baudrate</link> (
+uint16 baudrate)<para><emphasis>sets the baud rate for the USART interface</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_u_s_a_r_t_8c_1a9477920a260c72bf21f2c5e8a06bab20">USART_enable</link> (
+void )<para><emphasis>enables the USART interface</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_u_s_a_r_t_8c_1a9c2ea9ba29262272148b0a03fb3bf2f5">USART_Transmit_chr</link> (
+char data)<para><emphasis>transmits 8-bit data</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_u_s_a_r_t_8c_1a559d0ceb6f5cfc1e928269089cf48ec7">USART_Transmit_str</link> (
+const char * data)<para><emphasis>transmits a string of 8-bit data</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>char <link linkend="_u_s_a_r_t_8c_1a2d72172472c9d4b933ea0679a28134ed">USART_Receive_chr</link> (
+void )<para><emphasis>receives 8-bit data</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>char * <link linkend="_u_s_a_r_t_8c_1ac493d991dea8232bd95474a81f4a29be">USART_Receive_str</link> (
+void )<para><emphasis>receives a string of 8-bit data</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>includes function definition </para>
+
+<para><formalpara><title>Author: </title>
+
+<para>Loay Ashraf </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>1.0.0 </para>
+</formalpara>
+<formalpara><title>Precondition: </title>
+
+<para>include <link linkend="_u_s_a_r_t_8h">USART.h</link> </para>
+</formalpara>
+<para><link linkend="bug_1_bug000006">Bug</link> 
+<para>no known bugs </para>
+</para><formalpara><title>See also: </title>
+
+<para><link linkend="_u_s_a_r_t_8h">USART.h</link> </para>
+</formalpara>
+</para>
+    <para>Definition in file D:/Engineering/Software Development/Embedded/AVR/Projects/Car_Bluetooth/Car_Bluetooth/USART.c</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+10 <emphasis class="comment">//------------INCLUDE&#32;DRIVER&#32;HEADER&#32;FILE------------//</emphasis>
+11 
+12 <emphasis class="preprocessor">&#32;#include&#32;&quot;<link linkend="_u_s_a_r_t_8h">USART.h</link>&quot;</emphasis>
+13 
+14 <emphasis class="comment">//------------DECLARE&#32;LOCAL&#32;VARIABLES------------//</emphasis>
+15 
+<link linkend="_u_s_a_r_t_8c_1a5b5903a2d9dce5a296abb809fd0867f1">28 </link>&#32;<emphasis class="keyword">static</emphasis>&#32;uint8&#32;<link linkend="_u_s_a_r_t_8c_1a5b5903a2d9dce5a296abb809fd0867f1">mode_flag</link>&#32;=&#32;0;
+<link linkend="_u_s_a_r_t_8c_1a10a40cda365148ddff6da7622aee2e1c">29 </link>&#32;<emphasis class="keyword">static</emphasis>&#32;uint8&#32;<link linkend="_u_s_a_r_t_8c_1a10a40cda365148ddff6da7622aee2e1c">u2x_flag</link>&#32;=&#32;0;
+<link linkend="_u_s_a_r_t_8c_1a1c5be5f9abfd26f4777c65c65625ebce">30 </link>&#32;<emphasis class="keyword">static</emphasis>&#32;uint8&#32;<link linkend="_u_s_a_r_t_8c_1a1c5be5f9abfd26f4777c65c65625ebce">ninth_bit_flag</link>&#32;=&#32;0;
+31 
+<link linkend="_u_s_a_r_t_8h_1aad57089e8e6df3db3ddf901c43cc6972">40 </link>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_u_s_a_r_t_8c_1aad57089e8e6df3db3ddf901c43cc6972">USART_init</link>(uint8&#32;umode,&#32;uint8&#32;u2x,&#32;uint8&#32;ch_size,&#32;uint8&#32;parity_bit,&#32;uint8&#32;stop_bit){
+41 &#32;&#32;&#32;&#32;
+42 &#32;&#32;&#32;&#32;<link linkend="_u_s_a_r_t_8c_1a5b5903a2d9dce5a296abb809fd0867f1">mode_flag</link>&#32;=&#32;umode;&#32;
+43 &#32;&#32;&#32;&#32;<link linkend="_u_s_a_r_t_8c_1a10a40cda365148ddff6da7622aee2e1c">u2x_flag</link>&#32;=&#32;u2x;
+44 &#32;&#32;&#32;&#32;
+45 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>(umode&#32;==&#32;AS)
+46 
+47 &#32;&#32;&#32;&#32;UCSRA&#32;|=&#32;(u2x&lt;&lt;U2X);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Asynchronous&#32;mode</emphasis>
+48 
+49 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(umode&#32;==&#32;S)
+50 
+51 &#32;&#32;&#32;&#32;UCSRC&#32;|=&#32;((1&lt;&lt;URSEL)&#32;|&#32;(1&lt;&lt;UMSEL));&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Synchronous&#32;mode</emphasis>
+52 &#32;&#32;&#32;&#32;
+53 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>(ch_size&#32;!=&#32;9&#32;&amp;&amp;&#32;ch_size&#32;&gt;=&#32;5){
+54 &#32;&#32;&#32;&#32;
+55 &#32;&#32;&#32;&#32;<link linkend="_u_s_a_r_t_8c_1a1c5be5f9abfd26f4777c65c65625ebce">ninth_bit_flag</link>&#32;=&#32;0;&#32;
+56 &#32;&#32;&#32;&#32;UCSRC&#32;|=&#32;((1&lt;&lt;URSEL)&#32;|&#32;((ch_size-5)&lt;&lt;UCSZ0));&#32;&#32;&#32;<emphasis class="comment">//&#32;set&#32;number&#32;of&#32;bits&#32;in&#32;the&#32;data&#32;frame</emphasis>
+57 
+58 &#32;&#32;&#32;&#32;}<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(ch_size&#32;==&#32;9){
+59 
+60 &#32;&#32;&#32;&#32;<link linkend="_u_s_a_r_t_8c_1a1c5be5f9abfd26f4777c65c65625ebce">ninth_bit_flag</link>&#32;=&#32;1;
+61 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;set&#32;number&#32;of&#32;bits&#32;to&#32;9&#32;in&#32;the&#32;data&#32;frame</emphasis>
+62 &#32;&#32;&#32;&#32;UCSRB&#32;|=&#32;(1&lt;&lt;UCSZ2);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+63 &#32;&#32;&#32;&#32;UCSRC&#32;|=&#32;((1&lt;&lt;URSEL)&#32;|&#32;(3&lt;&lt;UCSZ0));&#32;
+64 
+65 &#32;&#32;&#32;&#32;}
+66 &#32;&#32;&#32;&#32;
+67 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>(parity_bit&#32;&gt;&#32;0&#32;&amp;&amp;&#32;stop_bit&#32;&gt;&#32;0)
+68 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;set&#32;parity&#32;mode&#32;and&#32;number&#32;of&#32;stop&#32;bits</emphasis>
+69 &#32;&#32;&#32;&#32;UCSRC&#32;|=&#32;((1&lt;&lt;URSEL)&#32;|&#32;(parity_bit&lt;&lt;UPM0)&#32;|&#32;((stop_bit-1)&lt;&lt;USBS));&#32;&#32;
+70 
+71 &#32;}
+72 
+<link linkend="_u_s_a_r_t_8h_1a0826b25854bf7ff20dff32cd4b9d0231">77 </link>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_u_s_a_r_t_8c_1a0826b25854bf7ff20dff32cd4b9d0231">USART_set_baudrate</link>(uint16&#32;baudrate){
+78 &#32;&#32;&#32;
+79 &#32;&#32;&#32;uint16&#32;UB_Baud&#32;=&#32;0;
+80 
+81 &#32;&#32;&#32;UCSRB&#32;&amp;=&#32;~((1&lt;&lt;RXEN)&#32;|&#32;(1&lt;&lt;TXEN));&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;disable&#32;receiver&#32;and&#32;transmitter&#32;buffers</emphasis>
+82 
+83 &#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>(<link linkend="_u_s_a_r_t_8c_1a5b5903a2d9dce5a296abb809fd0867f1">mode_flag</link>&#32;==&#32;AS){
+84 
+85 &#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="_u_s_a_r_t_8c_1a10a40cda365148ddff6da7622aee2e1c">u2x_flag</link>&#32;==&#32;0)
+86 
+87 &#32;&#32;&#32;UB_Baud&#32;=&#32;((F_CPU)/(16.0*baudrate))-1;&#32;&#32;&#32;<emphasis class="comment">//&#32;calculate&#32;baud&#32;rate&#32;based&#32;on&#32;CPU&#32;clock&#32;frequency,&#32;equations&#32;on&#32;p.&#32;143&#32;in&#32;datasheet</emphasis>
+88 
+89 &#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>(<link linkend="_u_s_a_r_t_8c_1a10a40cda365148ddff6da7622aee2e1c">u2x_flag</link>&#32;==&#32;1)
+90 
+91 &#32;&#32;&#32;UB_Baud&#32;=&#32;((F_CPU)/(8.0*baudrate))-1;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;calculate&#32;baud&#32;rate&#32;based&#32;on&#32;CPU&#32;clock&#32;frequency,&#32;equations&#32;on&#32;p.&#32;143&#32;in&#32;datasheet</emphasis>
+92 
+93 &#32;&#32;&#32;}<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>(<link linkend="_u_s_a_r_t_8c_1a5b5903a2d9dce5a296abb809fd0867f1">mode_flag</link>&#32;==&#32;S){
+94 &#32;&#32;&#32;&#32;
+95 &#32;&#32;&#32;UB_Baud&#32;=&#32;((F_CPU)/(2.0*baudrate))-1;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;calculate&#32;baud&#32;rate&#32;based&#32;on&#32;CPU&#32;clock&#32;frequency,&#32;equations&#32;on&#32;p.&#32;143&#32;in&#32;datasheet</emphasis>
+96 &#32;&#32;&#32;}
+97 &#32;&#32;&#32;<emphasis class="comment">//&#32;set&#32;the&#32;baud&#32;rate</emphasis>
+98 &#32;&#32;&#32;UBRRH&#32;=&#32;(uint8)&#32;(UB_Baud&#32;&gt;&gt;&#32;8);&#32;&#32;
+99 &#32;&#32;&#32;UBRRL&#32;=&#32;(uint8)&#32;UB_Baud;&#32;
+100 
+101 &#32;}
+102 &#32;
+<link linkend="_u_s_a_r_t_8h_1a9477920a260c72bf21f2c5e8a06bab20">106 </link>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_u_s_a_r_t_8c_1a9477920a260c72bf21f2c5e8a06bab20">USART_enable</link>(<emphasis class="keywordtype">void</emphasis>){
+107 
+108 &#32;&#32;UCSRB&#32;|=&#32;((1&lt;&lt;TXEN)&#32;|&#32;(1&lt;&lt;RXEN));&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;enable&#32;receiver&#32;and&#32;transmitter&#32;buffers</emphasis>
+109 
+110 &#32;}
+111 
+<link linkend="_u_s_a_r_t_8h_1a9c2ea9ba29262272148b0a03fb3bf2f5">116 </link>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_u_s_a_r_t_8c_1a9c2ea9ba29262272148b0a03fb3bf2f5">USART_Transmit_chr</link>(<emphasis class="keywordtype">char</emphasis>&#32;data){
+117 
+118 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">while</emphasis>(!(UCSRA&#32;&amp;&#32;(1&lt;&lt;UDRE)));&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;wait&#32;for&#32;empty&#32;transmit&#32;buffer</emphasis>
+119 &#32;&#32;&#32;&#32;
+120 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>(!<link linkend="_u_s_a_r_t_8c_1a1c5be5f9abfd26f4777c65c65625ebce">ninth_bit_flag</link>){
+121 
+122 &#32;&#32;&#32;&#32;&#32;&#32;UDR&#32;=&#32;data;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;start&#32;transmittion</emphasis>
+123 
+124 &#32;&#32;&#32;&#32;}<emphasis class="keywordflow">else</emphasis>{
+125 &#32;&#32;&#32;&#32;&#32;&#32;
+126 &#32;&#32;&#32;&#32;&#32;&#32;UCSRB&#32;&amp;=&#32;~(1&lt;&lt;TXB8);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;clear&#32;ninth&#32;data&#32;bit</emphasis>
+127 
+128 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>(data&#32;&amp;&#32;0x0100)
+129 
+130 &#32;&#32;&#32;&#32;&#32;&#32;UCSRB&#32;|=&#32;(1&lt;&lt;TXB8);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;set&#32;ninth&#32;data&#32;bit&#32;if&#32;it&apos;s&#32;set&#32;in&#32;the&#32;data</emphasis>
+131 &#32;&#32;&#32;&#32;&#32;&#32;
+132 &#32;&#32;&#32;&#32;&#32;&#32;UDR&#32;=&#32;data;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;start&#32;transmittion</emphasis>
+133 
+134 &#32;&#32;&#32;&#32;&#32;&#32;}
+135 &#32;}
+136 
+<link linkend="_u_s_a_r_t_8h_1a559d0ceb6f5cfc1e928269089cf48ec7">141 </link>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_u_s_a_r_t_8c_1a559d0ceb6f5cfc1e928269089cf48ec7">USART_Transmit_str</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*&#32;data){
+142 
+143 &#32;&#32;&#32;<emphasis class="keywordflow">while</emphasis>(*data&#32;!=&#32;<emphasis class="charliteral">&apos;\0&apos;</emphasis>){
+144 &#32;&#32;&#32;&#32;&#32;&#32;
+145 &#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_u_s_a_r_t_8c_1a9c2ea9ba29262272148b0a03fb3bf2f5">USART_Transmit_chr</link>(*data++);&#32;&#32;<emphasis class="comment">//&#32;iterate&#32;through&#32;the&#32;array&#32;till&#32;the&#32;NULL&#32;terminator</emphasis>
+146 
+147 &#32;&#32;&#32;&#32;}
+148 &#32;}
+149 
+<link linkend="_u_s_a_r_t_8h_1a2d72172472c9d4b933ea0679a28134ed">153 </link>&#32;<emphasis class="keywordtype">char</emphasis>&#32;<link linkend="_u_s_a_r_t_8c_1a2d72172472c9d4b933ea0679a28134ed">USART_Receive_chr</link>(<emphasis class="keywordtype">void</emphasis>){
+154 &#32;&#32;&#32;&#32;
+155 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">while</emphasis>(!(UCSRA&#32;&amp;&#32;(1&lt;&lt;RXC)));&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Wait&#32;for&#32;incoming&#32;data</emphasis>
+156 &#32;&#32;&#32;
+157 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!<link linkend="_u_s_a_r_t_8c_1a1c5be5f9abfd26f4777c65c65625ebce">ninth_bit_flag</link>)
+158 &#32;&#32;&#32;&#32;{
+159 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;UDR;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;return&#32;UDR&#32;register&#32;if&#32;there&apos;s&#32;no&#32;ninth&#32;bit</emphasis>
+160 
+161 &#32;&#32;&#32;&#32;}<emphasis class="keywordflow">else</emphasis>{
+162 
+163 &#32;&#32;&#32;&#32;uint8&#32;resh,resl;
+164 
+165 &#32;&#32;&#32;&#32;resh&#32;=&#32;UCSRB;
+166 &#32;&#32;&#32;&#32;resl&#32;=&#32;UDR;
+167 
+168 &#32;&#32;&#32;&#32;resh&#32;=&#32;(resh&#32;&gt;&gt;&#32;1)&#32;&amp;&#32;0x01;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;process&#32;the&#32;ninth&#32;bit</emphasis>
+169 
+170 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;((resh&#32;&lt;&lt;&#32;8)&#32;|&#32;resl);&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;return&#32;the&#32;combined&#32;9-bit&#32;data</emphasis>
+171 &#32;&#32;&#32;&#32;}&#32;
+172 &#32;}
+173 &#32;
+<link linkend="_u_s_a_r_t_8h_1ac493d991dea8232bd95474a81f4a29be">177 </link>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*&#32;<link linkend="_u_s_a_r_t_8c_1ac493d991dea8232bd95474a81f4a29be">USART_Receive_str</link>(<emphasis class="keywordtype">void</emphasis>){
+178 &#32;&#32;&#32;&#32;&#32;
+179 &#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;input[10];
+180 &#32;&#32;&#32;&#32;&#32;uint8&#32;tmp,&#32;<link linkend="main_8c_1a35da44c370602131b873e853934c34cf">i</link>&#32;=&#32;0;
+181 &#32;&#32;&#32;&#32;&#32;
+182 &#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">while</emphasis>&#32;((tmp=<link linkend="_u_s_a_r_t_8c_1a2d72172472c9d4b933ea0679a28134ed">USART_Receive_chr</link>())&#32;!=&#32;<emphasis class="charliteral">&apos;#&apos;</emphasis>){
+183 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;input[<link linkend="main_8c_1a35da44c370602131b873e853934c34cf">i</link>++]&#32;=&#32;tmp;&#32;&#32;&#32;<emphasis class="comment">//&#32;iterate&#32;through&#32;the&#32;array&#32;till&#32;the&#32;hash&#32;character&#32;is&#32;received</emphasis>
+184 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>(<link linkend="main_8c_1a35da44c370602131b873e853934c34cf">i</link>==9)
+185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;break&#32;loop&#32;if&#32;buffer&#32;size&#32;limit&#32;is&#32;reached</emphasis>
+186 &#32;&#32;&#32;&#32;&#32;}
+187 &#32;&#32;&#32;&#32;&#32;input[<link linkend="main_8c_1a35da44c370602131b873e853934c34cf">i</link>]&#32;=&#32;<emphasis class="charliteral">&apos;\0&apos;</emphasis>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;terminate&#32;the&#32;array&#32;with&#32;NULL&#32;terminator</emphasis>
+188 &#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;input;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;return&#32;pointer&#32;to&#32;the&#32;first&#32;element&#32;of&#32;the&#32;array</emphasis>
+189 &#32;}
+190 &#32;
+191 &#32;
+192 &#32;
+193 &#32;
+    </computeroutput></literallayout>
+</section>

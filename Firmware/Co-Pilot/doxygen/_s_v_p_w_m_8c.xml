@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_s_v_p_w_m_8c">
+    <title>SVPWM.c File Reference</title>
+    <programlisting>#include &quot;SVPWM.h&quot;</programlisting>
+    <programlisting>#include &quot;tab_sin_233.h&quot;</programlisting>
+<para>Include dependency diagram for SVPWM.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_s_v_p_w_m_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for SVPWM.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_s_v_p_w_m_8c__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8 <link linkend="_s_v_p_w_m_8c_1a0136aa912c59998f24a9ef5cabeb4cd9">Frequency</link><para><emphasis>current commutation frequency value</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8 <link linkend="_s_v_p_w_m_8c_1a544a52583d0dacab7a1446c8e35141dd">theta</link><para><emphasis>current angle value in the vector space</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8 <link linkend="_s_v_p_w_m_8c_1af12c2de58fa44dfb00f09e9c4e427a47">theta_step</link><para><emphasis>current angle step in the vector space</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8 <link linkend="_s_v_p_w_m_8c_1a4fbe7b976b8558d32e93d46679989927">sector</link><para><emphasis>current sector number in the vector space</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint16 <link linkend="_s_v_p_w_m_8c_1a8d6e880d5541bd63394a2de60413ba88">PWM0</link><para><emphasis>current compare register A value</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint16 <link linkend="_s_v_p_w_m_8c_1a60c458bdf0667234212c6d22c9a3b4cc">PWM1</link><para><emphasis>current compare register B value</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint16 <link linkend="_s_v_p_w_m_8c_1afbe1282602dd0da1193c8e2bf45e499d">PWM2</link><para><emphasis>current compare register C value</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float <link linkend="_s_v_p_w_m_8c_1a3ed583f6febf5e0b8e9d3dc196a87085">Voltage</link><para><emphasis>current output voltage value, can&apos;t exceed MAX_VOLTAGE value</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static uint16 <link linkend="_s_v_p_w_m_8c_1a401634ca5b86ff2387ca68d8bf731c7c">d1</link><para><emphasis>vector period time variable 1</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static uint16 <link linkend="_s_v_p_w_m_8c_1af0b786050ce4a35f23b36ec4124bcb58">d2</link><para><emphasis>vector period time variable 2</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_s_v_p_w_m_8c_1a7b8ab79df77b57475a5494f5f81c3bd9">timer_init</link> (
+void )<para><emphasis>initializes timer 1</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_s_v_p_w_m_8c_1abb876ecdd116982654d729dd7ab84a69">timer_load</link> (
+uint16 C0, uint16 C1, uint16 C2)<para><emphasis>loads timer 1 compare registers with new values</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_s_v_p_w_m_8c_1a1c9d5e29ad8899afe0c34571ddee18f9">shutdown</link> (
+void )<para><emphasis>shuts down the timer and Phases output</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_s_v_p_w_m_8c_1af01a0963301a7facc864ed21ffd66d47">SVPWM</link> (
+void )<para><emphasis>calculates new compare register values</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8 <link linkend="_s_v_p_w_m_8c_1aa7d90de0cae71038df2f87326203f640">VF_control</link> (
+uint8 Freq)<para><emphasis>shuts down the timer and Phases output</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>includes function definition </para>
+
+<para><formalpara><title>Author: </title>
+
+<para>Loay Ashraf </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>1.0.0 </para>
+</formalpara>
+<formalpara><title>Precondition: </title>
+
+<para>include <link linkend="_s_v_p_w_m_8h">SVPWM.h</link> and adjust switching parameters </para>
+</formalpara>
+<para><link linkend="bug_1_bug000004">Bug</link> 
+<para>no known bugs </para>
+</para><formalpara><title>Warning: </title>
+
+<para>PWM frequency default is 7 KHZ, it can be reduced but can&apos;t be increased because of possible race conditions </para>
+</formalpara>
+<formalpara><title>See also: </title>
+
+<para><link linkend="_s_v_p_w_m_8h">SVPWM.h</link> </para>
+</formalpara>
+</para>
+    <para>Definition in file D:/Engineering/Software Development/Embedded/AVR/Projects/SVPWM_P/SVPWM_P/SVPWM.c</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+11 <emphasis class="comment">//------------INCLUDE&#32;DRIVER&#32;HEADER&#32;FILE&#32;AND&#32;SINE&#32;LOOK-UP&#32;TABLE------------//</emphasis>
+12 
+13 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="_s_v_p_w_m_8h">SVPWM.h</link>&quot;</emphasis>
+14 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="tab__sin__233_8h">tab_sin_233.h</link>&quot;</emphasis>
+15 
+16 <emphasis class="comment">//------------DECLARE&#32;GLOBAL&#32;VARIABLES------------//</emphasis>
+56 <emphasis class="comment"></emphasis><emphasis class="keyword">extern</emphasis>&#32;uint8&#32;<link linkend="_s_v_p_w_m_8c_1a0136aa912c59998f24a9ef5cabeb4cd9">Frequency</link>,&#32;<link linkend="_s_v_p_w_m_8c_1a544a52583d0dacab7a1446c8e35141dd">theta</link>,&#32;<link linkend="_s_v_p_w_m_8c_1af12c2de58fa44dfb00f09e9c4e427a47">theta_step</link>,&#32;<link linkend="_s_v_p_w_m_8c_1a4fbe7b976b8558d32e93d46679989927">sector</link>;
+57 <emphasis class="keyword">extern</emphasis>&#32;uint16&#32;<link linkend="_s_v_p_w_m_8c_1a8d6e880d5541bd63394a2de60413ba88">PWM0</link>,&#32;<link linkend="_s_v_p_w_m_8c_1a60c458bdf0667234212c6d22c9a3b4cc">PWM1</link>,&#32;<link linkend="_s_v_p_w_m_8c_1afbe1282602dd0da1193c8e2bf45e499d">PWM2</link>;
+58 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="_s_v_p_w_m_8c_1a3ed583f6febf5e0b8e9d3dc196a87085">Voltage</link>;
+<link linkend="_s_v_p_w_m_8c_1af0b786050ce4a35f23b36ec4124bcb58">59 </link><emphasis class="keyword">static</emphasis>&#32;uint16&#32;<link linkend="_s_v_p_w_m_8c_1a401634ca5b86ff2387ca68d8bf731c7c">d1</link>,&#32;<link linkend="_s_v_p_w_m_8c_1af0b786050ce4a35f23b36ec4124bcb58">d2</link>;
+60 
+<link linkend="_s_v_p_w_m_8h_1a7b8ab79df77b57475a5494f5f81c3bd9">64 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_s_v_p_w_m_8c_1a7b8ab79df77b57475a5494f5f81c3bd9">timer_init</link>(<emphasis class="keywordtype">void</emphasis>){
+65 &#32;&#32;&#32;&#32;
+66 &#32;&#32;&#32;&#32;ICR1&#32;=&#32;MAX_PWM;
+67 &#32;&#32;&#32;&#32;TCCR1A&#32;=&#32;0xFC;&#32;&#32;<emphasis class="comment">//&#32;no&#32;prescaler,&#32;phase&#32;and&#32;frequency&#32;correct&#32;mode</emphasis>
+68 &#32;&#32;&#32;&#32;TCCR1B&#32;=&#32;0x11;&#32;&#32;<emphasis class="comment">//&#32;set&#32;when&#32;up&#32;counting,&#32;clear&#32;when&#32;down&#32;counting</emphasis>
+69 &#32;&#32;&#32;&#32;
+70 }
+<link linkend="_s_v_p_w_m_8h_1abb876ecdd116982654d729dd7ab84a69">77 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_s_v_p_w_m_8c_1abb876ecdd116982654d729dd7ab84a69">timer_load</link>(uint16&#32;C0,&#32;uint16&#32;C1,&#32;uint16&#32;C2){
+78 &#32;&#32;&#32;&#32;
+79 &#32;&#32;&#32;&#32;OCR1A&#32;=&#32;C0;&#32;<emphasis class="comment">//&#32;compare&#32;register&#32;A</emphasis>
+80 &#32;&#32;&#32;&#32;OCR1B&#32;=&#32;C1;&#32;<emphasis class="comment">//&#32;compare&#32;register&#32;B</emphasis>
+81 &#32;&#32;&#32;&#32;OCR1C&#32;=&#32;C2;&#32;<emphasis class="comment">//&#32;compare&#32;register&#32;C</emphasis>
+82 &#32;&#32;&#32;&#32;
+83 }
+84 
+<link linkend="_s_v_p_w_m_8h_1a1c9d5e29ad8899afe0c34571ddee18f9">88 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_s_v_p_w_m_8c_1a1c9d5e29ad8899afe0c34571ddee18f9">shutdown</link>(<emphasis class="keywordtype">void</emphasis>){
+89 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;timer&#32;1&#32;and&#32;its&#32;outputs&#32;are&#32;off</emphasis>
+90 &#32;&#32;&#32;&#32;TCCR1A&#32;=&#32;0x00;
+91 &#32;&#32;&#32;&#32;TCCR1B&#32;=&#32;0x00;
+92 &#32;&#32;&#32;&#32;TCNT1&#32;=&#32;0;
+93 &#32;&#32;&#32;&#32;ICR1&#32;=&#32;0;
+94 &#32;&#32;&#32;&#32;OCR1A&#32;=&#32;0;
+95 &#32;&#32;&#32;&#32;OCR1B&#32;=&#32;0;
+96 &#32;&#32;&#32;&#32;OCR1C&#32;=&#32;0;
+97 &#32;&#32;&#32;&#32;PORTB&#32;=&#32;0xE0;&#32;&#32;&#32;<emphasis class="comment">//&#32;all&#32;three&#32;phases&#32;are&#32;high</emphasis>
+98 &#32;&#32;&#32;&#32;
+99 }
+100 
+<link linkend="_s_v_p_w_m_8h_1af01a0963301a7facc864ed21ffd66d47">104 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_s_v_p_w_m_8c_1af01a0963301a7facc864ed21ffd66d47">SVPWM</link>(<emphasis class="keywordtype">void</emphasis>){
+105 &#32;&#32;&#32;&#32;
+106 &#32;&#32;&#32;&#32;<link linkend="_s_v_p_w_m_8c_1a401634ca5b86ff2387ca68d8bf731c7c">d1</link>&#32;=&#32;47*<link linkend="_s_v_p_w_m_8c_1a3ed583f6febf5e0b8e9d3dc196a87085">Voltage</link>*<link linkend="tab__sin__233_8h_1ad60a8a94682096901f417a3b76c6540c">tab_sin</link>[MAX_THETA-<link linkend="_s_v_p_w_m_8c_1a544a52583d0dacab7a1446c8e35141dd">theta</link>];
+107 &#32;&#32;&#32;&#32;<link linkend="_s_v_p_w_m_8c_1af0b786050ce4a35f23b36ec4124bcb58">d2</link>&#32;=&#32;47*<link linkend="_s_v_p_w_m_8c_1a3ed583f6febf5e0b8e9d3dc196a87085">Voltage</link>*<link linkend="tab__sin__233_8h_1ad60a8a94682096901f417a3b76c6540c">tab_sin</link>[<link linkend="_s_v_p_w_m_8c_1a544a52583d0dacab7a1446c8e35141dd">theta</link>];
+108 &#32;&#32;&#32;&#32;
+109 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">switch</emphasis>&#32;(<link linkend="_s_v_p_w_m_8c_1a4fbe7b976b8558d32e93d46679989927">sector</link>){
+110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+111 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;1:&#32;{<link linkend="_s_v_p_w_m_8c_1a8d6e880d5541bd63394a2de60413ba88">PWM0</link>&#32;=&#32;MAX_PWM_DIV_TWO-<link linkend="_s_v_p_w_m_8c_1a401634ca5b86ff2387ca68d8bf731c7c">d1</link>-<link linkend="_s_v_p_w_m_8c_1af0b786050ce4a35f23b36ec4124bcb58">d2</link>;
+112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_s_v_p_w_m_8c_1a60c458bdf0667234212c6d22c9a3b4cc">PWM1</link>&#32;=&#32;MAX_PWM_DIV_TWO+<link linkend="_s_v_p_w_m_8c_1a401634ca5b86ff2387ca68d8bf731c7c">d1</link>-<link linkend="_s_v_p_w_m_8c_1af0b786050ce4a35f23b36ec4124bcb58">d2</link>;
+113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_s_v_p_w_m_8c_1afbe1282602dd0da1193c8e2bf45e499d">PWM2</link>&#32;=&#32;MAX_PWM_DIV_TWO+<link linkend="_s_v_p_w_m_8c_1a401634ca5b86ff2387ca68d8bf731c7c">d1</link>+<link linkend="_s_v_p_w_m_8c_1af0b786050ce4a35f23b36ec4124bcb58">d2</link>;}&#32;
+114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+115 &#32;&#32;&#32;&#32;
+116 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;2:&#32;{<link linkend="_s_v_p_w_m_8c_1a8d6e880d5541bd63394a2de60413ba88">PWM0</link>&#32;=&#32;MAX_PWM_DIV_TWO-<link linkend="_s_v_p_w_m_8c_1a401634ca5b86ff2387ca68d8bf731c7c">d1</link>+<link linkend="_s_v_p_w_m_8c_1af0b786050ce4a35f23b36ec4124bcb58">d2</link>;
+117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_s_v_p_w_m_8c_1a60c458bdf0667234212c6d22c9a3b4cc">PWM1</link>&#32;=&#32;MAX_PWM_DIV_TWO-<link linkend="_s_v_p_w_m_8c_1a401634ca5b86ff2387ca68d8bf731c7c">d1</link>-<link linkend="_s_v_p_w_m_8c_1af0b786050ce4a35f23b36ec4124bcb58">d2</link>;
+118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_s_v_p_w_m_8c_1afbe1282602dd0da1193c8e2bf45e499d">PWM2</link>&#32;=&#32;MAX_PWM_DIV_TWO+<link linkend="_s_v_p_w_m_8c_1a401634ca5b86ff2387ca68d8bf731c7c">d1</link>+<link linkend="_s_v_p_w_m_8c_1af0b786050ce4a35f23b36ec4124bcb58">d2</link>;}
+119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+121 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;3:&#32;{<link linkend="_s_v_p_w_m_8c_1a8d6e880d5541bd63394a2de60413ba88">PWM0</link>&#32;=&#32;MAX_PWM_DIV_TWO+<link linkend="_s_v_p_w_m_8c_1a401634ca5b86ff2387ca68d8bf731c7c">d1</link>+<link linkend="_s_v_p_w_m_8c_1af0b786050ce4a35f23b36ec4124bcb58">d2</link>;
+122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_s_v_p_w_m_8c_1a60c458bdf0667234212c6d22c9a3b4cc">PWM1</link>&#32;=&#32;MAX_PWM_DIV_TWO-<link linkend="_s_v_p_w_m_8c_1a401634ca5b86ff2387ca68d8bf731c7c">d1</link>-<link linkend="_s_v_p_w_m_8c_1af0b786050ce4a35f23b36ec4124bcb58">d2</link>;
+123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_s_v_p_w_m_8c_1afbe1282602dd0da1193c8e2bf45e499d">PWM2</link>&#32;=&#32;MAX_PWM_DIV_TWO+<link linkend="_s_v_p_w_m_8c_1a401634ca5b86ff2387ca68d8bf731c7c">d1</link>-<link linkend="_s_v_p_w_m_8c_1af0b786050ce4a35f23b36ec4124bcb58">d2</link>;}
+124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+126 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;4:&#32;{<link linkend="_s_v_p_w_m_8c_1a8d6e880d5541bd63394a2de60413ba88">PWM0</link>&#32;=&#32;MAX_PWM_DIV_TWO+<link linkend="_s_v_p_w_m_8c_1a401634ca5b86ff2387ca68d8bf731c7c">d1</link>+<link linkend="_s_v_p_w_m_8c_1af0b786050ce4a35f23b36ec4124bcb58">d2</link>;
+127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_s_v_p_w_m_8c_1a60c458bdf0667234212c6d22c9a3b4cc">PWM1</link>&#32;=&#32;MAX_PWM_DIV_TWO-<link linkend="_s_v_p_w_m_8c_1a401634ca5b86ff2387ca68d8bf731c7c">d1</link>+<link linkend="_s_v_p_w_m_8c_1af0b786050ce4a35f23b36ec4124bcb58">d2</link>;
+128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_s_v_p_w_m_8c_1afbe1282602dd0da1193c8e2bf45e499d">PWM2</link>&#32;=&#32;MAX_PWM_DIV_TWO-<link linkend="_s_v_p_w_m_8c_1a401634ca5b86ff2387ca68d8bf731c7c">d1</link>-<link linkend="_s_v_p_w_m_8c_1af0b786050ce4a35f23b36ec4124bcb58">d2</link>;}&#32;
+129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+131 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;5:&#32;{<link linkend="_s_v_p_w_m_8c_1a8d6e880d5541bd63394a2de60413ba88">PWM0</link>&#32;=&#32;MAX_PWM_DIV_TWO+<link linkend="_s_v_p_w_m_8c_1a401634ca5b86ff2387ca68d8bf731c7c">d1</link>-<link linkend="_s_v_p_w_m_8c_1af0b786050ce4a35f23b36ec4124bcb58">d2</link>;
+132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_s_v_p_w_m_8c_1a60c458bdf0667234212c6d22c9a3b4cc">PWM1</link>&#32;=&#32;MAX_PWM_DIV_TWO+<link linkend="_s_v_p_w_m_8c_1a401634ca5b86ff2387ca68d8bf731c7c">d1</link>+<link linkend="_s_v_p_w_m_8c_1af0b786050ce4a35f23b36ec4124bcb58">d2</link>;
+133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_s_v_p_w_m_8c_1afbe1282602dd0da1193c8e2bf45e499d">PWM2</link>&#32;=&#32;MAX_PWM_DIV_TWO-<link linkend="_s_v_p_w_m_8c_1a401634ca5b86ff2387ca68d8bf731c7c">d1</link>-<link linkend="_s_v_p_w_m_8c_1af0b786050ce4a35f23b36ec4124bcb58">d2</link>;}
+134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+136 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;6:&#32;{<link linkend="_s_v_p_w_m_8c_1a8d6e880d5541bd63394a2de60413ba88">PWM0</link>&#32;=&#32;MAX_PWM_DIV_TWO-<link linkend="_s_v_p_w_m_8c_1a401634ca5b86ff2387ca68d8bf731c7c">d1</link>-<link linkend="_s_v_p_w_m_8c_1af0b786050ce4a35f23b36ec4124bcb58">d2</link>;
+137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_s_v_p_w_m_8c_1a60c458bdf0667234212c6d22c9a3b4cc">PWM1</link>&#32;=&#32;MAX_PWM_DIV_TWO+<link linkend="_s_v_p_w_m_8c_1a401634ca5b86ff2387ca68d8bf731c7c">d1</link>+<link linkend="_s_v_p_w_m_8c_1af0b786050ce4a35f23b36ec4124bcb58">d2</link>;
+138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_s_v_p_w_m_8c_1afbe1282602dd0da1193c8e2bf45e499d">PWM2</link>&#32;=&#32;MAX_PWM_DIV_TWO-<link linkend="_s_v_p_w_m_8c_1a401634ca5b86ff2387ca68d8bf731c7c">d1</link>+<link linkend="_s_v_p_w_m_8c_1af0b786050ce4a35f23b36ec4124bcb58">d2</link>;}
+139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+141 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">default</emphasis>:&#32;{<link linkend="_s_v_p_w_m_8c_1a8d6e880d5541bd63394a2de60413ba88">PWM0</link>&#32;=&#32;MAX_PWM_DIV_TWO;
+142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_s_v_p_w_m_8c_1a60c458bdf0667234212c6d22c9a3b4cc">PWM1</link>&#32;=&#32;MAX_PWM_DIV_TWO;
+143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_s_v_p_w_m_8c_1afbe1282602dd0da1193c8e2bf45e499d">PWM2</link>&#32;=&#32;MAX_PWM_DIV_TWO;}&#32;&#32;
+144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+145 &#32;&#32;&#32;&#32;}
+146 &#32;&#32;&#32;&#32;
+147 &#32;&#32;&#32;&#32;<link linkend="_s_v_p_w_m_8c_1a544a52583d0dacab7a1446c8e35141dd">theta</link>&#32;+=&#32;<link linkend="_s_v_p_w_m_8c_1af12c2de58fa44dfb00f09e9c4e427a47">theta_step</link>;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;increment&#32;vector&#32;angle</emphasis>
+148 &#32;&#32;&#32;&#32;
+149 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="_s_v_p_w_m_8c_1a544a52583d0dacab7a1446c8e35141dd">theta</link>&#32;&gt;&#32;MAX_THETA)
+150 &#32;&#32;&#32;&#32;{
+151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_s_v_p_w_m_8c_1a544a52583d0dacab7a1446c8e35141dd">theta</link>&#32;=&#32;0;
+153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>(++<link linkend="_s_v_p_w_m_8c_1a4fbe7b976b8558d32e93d46679989927">sector</link>&#32;&gt;&#32;6)
+154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_s_v_p_w_m_8c_1a4fbe7b976b8558d32e93d46679989927">sector</link>&#32;=&#32;1;
+155 &#32;&#32;&#32;&#32;}
+156 }
+157 
+<link linkend="_s_v_p_w_m_8h_1aa7d90de0cae71038df2f87326203f640">162 </link>uint8&#32;<link linkend="_s_v_p_w_m_8c_1aa7d90de0cae71038df2f87326203f640">VF_control</link>(uint8&#32;Freq){
+163 &#32;&#32;&#32;&#32;
+164 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;Freq*VF_SLOPE;
+165 }
+    </computeroutput></literallayout>
+</section>

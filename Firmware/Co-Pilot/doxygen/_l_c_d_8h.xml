@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_l_c_d_8h">
+    <title>LCD.h File Reference</title>
+    <programlisting>#include &quot;micro_config.h&quot;</programlisting>
+<para>Include dependency diagram for LCD.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_l_c_d_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for LCD.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_l_c_d_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Macros</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_l_c_d_8h_1a17732f9906e7a639c74f81b7be385ae8">AO</link> &amp;PORTA</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_l_c_d_8h_1a449e8aac922c7f3659cbbf80cf88df10">BO</link> &amp;PORTB</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_l_c_d_8h_1a0f1b8abea02e07e3e3ec0a09ef33ea00">CO</link> &amp;PORTC</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_l_c_d_8h_1a89f8701562ac09bf5c1e58516124c500">DO</link> &amp;PORTD</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_l_c_d_8h_1aa1e30e32b6c2cf8d90a9281328472dbe">FOUR_BITS</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_l_c_d_8h_1a2f28db4225870f507fbdd0cf68f0a4fe">LCD_init</link> (
+volatile uint8 * Data_PORT, volatile uint8 * Control_PORT)<para><emphasis>initializes the LCD interface</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_l_c_d_8h_1a3a31eadded9b6270621dfa8d8d316c31">LCD_cmd</link> (
+uint8 cmd)<para><emphasis>sends commands to the LCD</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_l_c_d_8h_1ab3d3c08a4027d3e918914c1562ced027">LCD_clear</link> (
+void )<para><emphasis>clears the text diplayed on LCD</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_l_c_d_8h_1a765b548007c2dd1324208afcc7c02085">LCD_set_cursor</link> (
+uint8 row, uint8 col)<para><emphasis>sets the position for the cursor</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_l_c_d_8h_1abe209ff480fbd38f3a9b4e03fab286fb">LCD_write_chr</link> (
+char data)<para><emphasis>displays a character on the LCD</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_l_c_d_8h_1a24b307a9125b415e76b51e3d9e0b22ef">LCD_write_string</link> (
+const char * data)<para><emphasis>displays a string on the LCD</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_l_c_d_8h_1af15a9ff92f4da521914c61f4f19d568c">LCD_write_int</link> (
+uint16 data)<para><emphasis>displays an integer number on the LCD</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_l_c_d_8h_1a8ab35ac01f1276b81c720aaae182f3a9">LCD_write_float</link> (
+float data)<para><emphasis>displays a float number on the LCD</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>This driver supports interfacing of parallel interface character LCD (both 16x2 and 20x4); this file includes function prototypes for <link linkend="_l_c_d_8c">LCD.c</link>. </para>
+
+<para><formalpara><title>Author: </title>
+
+<para>Loay Ashraf </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>1.0.0 </para>
+</formalpara>
+<formalpara><title>Precondition: </title>
+
+<para>include delay.h and stdlib.h in <link linkend="micro__config_8h">micro_config.h</link> </para>
+</formalpara>
+<para><link linkend="bug_1_bug000004">Bug</link> 
+<para>no known bugs </para>
+</para><formalpara><title>Warning: </title>
+
+<para>data mode has to be selected here </para>
+</formalpara>
+<formalpara><title>See also: </title>
+
+<para><link linkend="micro__config_8h">micro_config.h</link> </para>
+</formalpara>
+</para>
+    <para>Definition in file D:/Engineering/Software Development/Embedded/AVR/Projects/SVPWM_COP/SVPWM_COP/LCD.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+13 <emphasis class="preprocessor">#ifndef&#32;LCD_H_</emphasis>
+14 <emphasis class="preprocessor">#define&#32;LCD_H_</emphasis>
+15 
+16 <emphasis class="comment">//------------INCLUDE&#32;MCU&#32;CONFIGURATION------------//</emphasis>
+17 
+18 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="micro__config_8h">micro_config.h</link>&quot;</emphasis>
+19 
+20 <emphasis class="comment">//------------DEFINE&#32;PORT&#32;POINTERS&#32;ABBREVIATIONS&#32;AND&#32;DATA&#32;MODE------------//</emphasis>
+21 
+22 <emphasis class="preprocessor">#define&#32;AO&#32;&amp;PORTA</emphasis>
+23 <emphasis class="preprocessor">#define&#32;BO&#32;&amp;PORTB</emphasis>
+24 <emphasis class="preprocessor">#define&#32;CO&#32;&amp;PORTC</emphasis>
+25 <emphasis class="preprocessor">#define&#32;DO&#32;&amp;PORTD</emphasis>
+26 <emphasis class="comment">//#define&#32;EIGHT_BITS&#32;1</emphasis>
+27 <emphasis class="preprocessor">#define&#32;FOUR_BITS&#32;</emphasis>
+28 
+29 <emphasis class="comment">//------------FUNCTION&#32;PROTOTYPES------------//</emphasis>
+30 
+31 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_l_c_d_8h_1a2f28db4225870f507fbdd0cf68f0a4fe">LCD_init</link>(<emphasis class="keyword">volatile</emphasis>&#32;uint8&#32;*&#32;Data_PORT,&#32;<emphasis class="keyword">volatile</emphasis>&#32;uint8&#32;*&#32;Control_PORT);
+32 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_l_c_d_8h_1a3a31eadded9b6270621dfa8d8d316c31">LCD_cmd</link>(uint8&#32;cmd);
+33 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_l_c_d_8h_1ab3d3c08a4027d3e918914c1562ced027">LCD_clear</link>(<emphasis class="keywordtype">void</emphasis>);
+34 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_l_c_d_8h_1a765b548007c2dd1324208afcc7c02085">LCD_set_cursor</link>(uint8&#32;row,&#32;uint8&#32;col);
+35 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_l_c_d_8h_1abe209ff480fbd38f3a9b4e03fab286fb">LCD_write_chr</link>(<emphasis class="keywordtype">char</emphasis>&#32;data);
+36 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_l_c_d_8h_1a24b307a9125b415e76b51e3d9e0b22ef">LCD_write_string</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*&#32;data);
+37 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_l_c_d_8h_1af15a9ff92f4da521914c61f4f19d568c">LCD_write_int</link>(uint16&#32;data);
+38 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_l_c_d_8h_1a8ab35ac01f1276b81c720aaae182f3a9">LCD_write_float</link>(<emphasis class="keywordtype">float</emphasis>&#32;data);
+39 &#32;
+40 <emphasis class="preprocessor">#endif&#32;</emphasis><emphasis class="comment">/*&#32;LCD_H_&#32;*/</emphasis><emphasis class="preprocessor"></emphasis>
+    </computeroutput></literallayout>
+</section>

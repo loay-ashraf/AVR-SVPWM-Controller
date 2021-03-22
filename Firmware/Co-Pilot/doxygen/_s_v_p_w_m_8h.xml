@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_s_v_p_w_m_8h">
+    <title>SVPWM.h File Reference</title>
+    <programlisting>#include &quot;micro_config.h&quot;</programlisting>
+<para>Include dependency diagram for SVPWM.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_s_v_p_w_m_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for SVPWM.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_s_v_p_w_m_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Macros</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_s_v_p_w_m_8h_1a1fcff99f421f1bc8a1bbdb641ca0324e">MAX_FREQUENCY</link> 90</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_s_v_p_w_m_8h_1a0637861f9419cef73e2e7e6210280e4e">MAX_VOLTAGE</link> 12</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_s_v_p_w_m_8h_1a1df990f1a1fc97b95e8d53f719968026">MAX_PWM</link> 1140</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_s_v_p_w_m_8h_1a221a1036f804f205308d67ab894dd396">MAX_PWM_DIV_TWO</link> 570</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_s_v_p_w_m_8h_1a6b5bc83c2d76c93f2335e4cecc8afd8c">MAX_THETA</link> 232</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_s_v_p_w_m_8h_1afdb1146b07c632eb09ead10a3e53b08b">VF_SLOPE</link> 0.133</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_s_v_p_w_m_8h_1a50a67bb96611ff3ab256c4f9f428caa6">SW_FREQUENCY</link> 7018L</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_s_v_p_w_m_8h_1a6ddfdda7a062d10cff4a72b76b44aeb8">FORWARD</link> 1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_s_v_p_w_m_8h_1adf445abfe1b77fa63f89e315ccc2f7f2">BACKWARD</link> 0</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_s_v_p_w_m_8h_1a7b8ab79df77b57475a5494f5f81c3bd9">timer_init</link> (
+void )<para><emphasis>initializes timer 1</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_s_v_p_w_m_8h_1abb876ecdd116982654d729dd7ab84a69">timer_load</link> (
+uint16 C0, uint16 C1, uint16 C2)<para><emphasis>loads timer 1 compare registers with new values</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_s_v_p_w_m_8h_1a1c9d5e29ad8899afe0c34571ddee18f9">shutdown</link> (
+void )<para><emphasis>shuts down the timer and Phases output</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_s_v_p_w_m_8h_1af01a0963301a7facc864ed21ffd66d47">SVPWM</link> (
+void )<para><emphasis>calculates new compare register values</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8 <link linkend="_s_v_p_w_m_8h_1aa7d90de0cae71038df2f87326203f640">VF_control</link> (
+uint8 Freq)<para><emphasis>shuts down the timer and Phases output</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>This library lays a foundation for outputting sinusoidal PWM using the Space Vector algorithm, and it can be ported to nearly any device; this file includes function prototypes for <link linkend="_s_v_p_w_m_8c">SVPWM.c</link>. </para>
+
+<para><formalpara><title>Author: </title>
+
+<para>Loay Ashraf </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>1.0.0 </para>
+</formalpara>
+<formalpara><title>Precondition: </title>
+
+<para>include <link linkend="micro__config_8h">micro_config.h</link> </para>
+</formalpara>
+<para><link linkend="bug_1_bug000005">Bug</link> 
+<para>no known bugs </para>
+</para><formalpara><title>See also: </title>
+
+<para><link linkend="micro__config_8h">micro_config.h</link> </para>
+</formalpara>
+</para>
+    <para>Definition in file D:/Engineering/Software Development/Embedded/AVR/Projects/SVPWM_P/SVPWM_P/SVPWM.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+15 <emphasis class="preprocessor">#ifndef&#32;SVPWM_H_</emphasis>
+16 <emphasis class="preprocessor">#define&#32;SVPWM_H_</emphasis>
+17 
+18 <emphasis class="comment">//------------INCLUDE&#32;MCU&#32;CONFIGURATION------------//</emphasis>
+19 
+20 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="micro__config_8h">micro_config.h</link>&quot;</emphasis>
+21 
+22 <emphasis class="comment">//----------------DEFINE&#32;SWITCHING&#32;PARAMETERS---------------//</emphasis>
+23 <emphasis class="comment">//--------------SW_FREQUENCY&#32;=&#32;(16*10^6)/(2*MAX_PWM)--------------//</emphasis>
+24 
+25 <emphasis class="preprocessor">#define&#32;MAX_FREQUENCY&#32;90</emphasis>
+26 <emphasis class="preprocessor">#define&#32;MAX_VOLTAGE&#32;12</emphasis>
+27 <emphasis class="preprocessor">#define&#32;MAX_PWM&#32;1140</emphasis>
+28 <emphasis class="preprocessor">#define&#32;MAX_PWM_DIV_TWO&#32;570</emphasis>
+29 <emphasis class="preprocessor">#define&#32;MAX_THETA&#32;232</emphasis>
+30 <emphasis class="preprocessor">#define&#32;VF_SLOPE&#32;0.133</emphasis>
+31 <emphasis class="preprocessor">#define&#32;SW_FREQUENCY&#32;7018L</emphasis>
+32 <emphasis class="preprocessor">#define&#32;FORWARD&#32;1</emphasis>
+33 <emphasis class="preprocessor">#define&#32;BACKWARD&#32;0</emphasis>
+34 
+35 <emphasis class="comment">//------------FUNCTION&#32;PROTOTYPES------------//</emphasis>
+36 
+37 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_s_v_p_w_m_8h_1a7b8ab79df77b57475a5494f5f81c3bd9">timer_init</link>(<emphasis class="keywordtype">void</emphasis>);
+38 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_s_v_p_w_m_8h_1abb876ecdd116982654d729dd7ab84a69">timer_load</link>(uint16&#32;C0,&#32;uint16&#32;C1,&#32;uint16&#32;C2);
+39 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_s_v_p_w_m_8h_1a1c9d5e29ad8899afe0c34571ddee18f9">shutdown</link>(<emphasis class="keywordtype">void</emphasis>);
+40 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_s_v_p_w_m_8h_1af01a0963301a7facc864ed21ffd66d47">SVPWM</link>(<emphasis class="keywordtype">void</emphasis>);
+41 uint8&#32;<link linkend="_s_v_p_w_m_8h_1aa7d90de0cae71038df2f87326203f640">VF_control</link>(uint8&#32;Freq);
+42 
+43 
+44 
+45 <emphasis class="preprocessor">#endif&#32;</emphasis><emphasis class="comment">/*&#32;SVPWM_H_&#32;*/</emphasis><emphasis class="preprocessor"></emphasis>
+    </computeroutput></literallayout>
+</section>

@@ -1,0 +1,362 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_l_c_d_8c">
+    <title>LCD.c File Reference</title>
+    <programlisting>#include &quot;LCD.h&quot;</programlisting>
+<para>Include dependency diagram for LCD.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_l_c_d_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for LCD.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_l_c_d_8c__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static volatile uint8 * <link linkend="_l_c_d_8c_1aced57bb37a8f8c3c0a87d6a3af97fa0f">D_PORT</link><para><emphasis>holds memory address for the data port</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static volatile uint8 * <link linkend="_l_c_d_8c_1aad4f3a80425e5d4ad7d757bc396d891c">C_PORT</link><para><emphasis>holds memory address for the command port</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_l_c_d_8c_1a2f28db4225870f507fbdd0cf68f0a4fe">LCD_init</link> (
+volatile uint8 * Data_PORT, volatile uint8 * Control_PORT)<para><emphasis>initializes the LCD interface</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_l_c_d_8c_1a3a31eadded9b6270621dfa8d8d316c31">LCD_cmd</link> (
+uint8 cmd)<para><emphasis>sends commands to the LCD</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_l_c_d_8c_1ab3d3c08a4027d3e918914c1562ced027">LCD_clear</link> (
+void )<para><emphasis>clears the text diplayed on LCD</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_l_c_d_8c_1a765b548007c2dd1324208afcc7c02085">LCD_set_cursor</link> (
+uint8 row, uint8 col)<para><emphasis>sets the position for the cursor</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_l_c_d_8c_1abe209ff480fbd38f3a9b4e03fab286fb">LCD_write_chr</link> (
+char data)<para><emphasis>displays a character on the LCD</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_l_c_d_8c_1a24b307a9125b415e76b51e3d9e0b22ef">LCD_write_string</link> (
+const char * data)<para><emphasis>displays a string on the LCD</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_l_c_d_8c_1af15a9ff92f4da521914c61f4f19d568c">LCD_write_int</link> (
+uint16 data)<para><emphasis>displays an integer number on the LCD</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_l_c_d_8c_1a8ab35ac01f1276b81c720aaae182f3a9">LCD_write_float</link> (
+float data)<para><emphasis>displays a float number on the LCD</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>includes function definition </para>
+
+<para><formalpara><title>Author: </title>
+
+<para>Loay Ashraf </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>1.0.0 </para>
+</formalpara>
+<formalpara><title>Precondition: </title>
+
+<para>include <link linkend="_l_c_d_8h">LCD.h</link> </para>
+</formalpara>
+<para><link linkend="bug_1_bug000003">Bug</link> 
+<para>no known bugs </para>
+</para><formalpara><title>Warning: </title>
+
+<para>the functions LCD_write_int and LCD_write_float have maximum digit number of 7 and has to be modified manually </para>
+</formalpara>
+<formalpara><title>See also: </title>
+
+<para><link linkend="_l_c_d_8h">LCD.h</link> </para>
+</formalpara>
+</para>
+    <para>Definition in file D:/Engineering/Software Development/Embedded/AVR/Projects/SVPWM_COP/SVPWM_COP/LCD.c</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+11 <emphasis class="comment">//------------INCLUDE&#32;DRIVER&#32;HEADER&#32;FILE------------//</emphasis>
+12 
+13 <emphasis class="preprocessor">&#32;#include&#32;&quot;<link linkend="_l_c_d_8h">LCD.h</link>&quot;</emphasis>
+14 &#32;
+15 &#32;<emphasis class="comment">//------------DECLARE&#32;LOCAL&#32;VARIABLES------------//</emphasis>
+16 &#32;
+<link linkend="_l_c_d_8c_1aced57bb37a8f8c3c0a87d6a3af97fa0f">25 </link>&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">volatile</emphasis>&#32;uint8&#32;*&#32;<link linkend="_l_c_d_8c_1aced57bb37a8f8c3c0a87d6a3af97fa0f">D_PORT</link>;
+<link linkend="_l_c_d_8c_1aad4f3a80425e5d4ad7d757bc396d891c">26 </link>&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">volatile</emphasis>&#32;uint8&#32;*&#32;<link linkend="_l_c_d_8c_1aad4f3a80425e5d4ad7d757bc396d891c">C_PORT</link>;
+27 &#32;
+<link linkend="_l_c_d_8h_1a2f28db4225870f507fbdd0cf68f0a4fe">33 </link>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_l_c_d_8c_1a2f28db4225870f507fbdd0cf68f0a4fe">LCD_init</link>(<emphasis class="keyword">volatile</emphasis>&#32;uint8&#32;*&#32;Data_PORT,&#32;<emphasis class="keyword">volatile</emphasis>&#32;uint8&#32;*&#32;Control_PORT){
+34 &#32;&#32;&#32;
+35 &#32;&#32;&#32;*Data_PORT&#32;=&#32;0;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;ensure&#32;Data&#32;Port&#32;is&#32;cleared</emphasis>
+36 &#32;&#32;&#32;*Control_PORT&#32;=&#32;0;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;ensure&#32;Control&#32;Port&#32;is&#32;cleared</emphasis>
+37 &#32;&#32;&#32;<link linkend="_l_c_d_8c_1aced57bb37a8f8c3c0a87d6a3af97fa0f">D_PORT</link>&#32;=&#32;Data_PORT;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;store&#32;Data&#32;Port&#32;memory&#32;address&#32;in&#32;local&#32;storage</emphasis>
+38 &#32;&#32;&#32;<link linkend="_l_c_d_8c_1aad4f3a80425e5d4ad7d757bc396d891c">C_PORT</link>&#32;=&#32;Control_PORT;&#32;&#32;&#32;<emphasis class="comment">//&#32;store&#32;Control&#32;Port&#32;memory&#32;address&#32;in&#32;local&#32;storage</emphasis>
+39 &#32;&#32;&#32;&#32;
+40 <emphasis class="preprocessor">&#32;&#32;&#32;#ifdef&#32;EIGHT_BITS&#32;</emphasis>
+41 &#32;&#32;&#32;
+42 &#32;&#32;&#32;&#32;<emphasis class="comment">//------------RESET&#32;THE&#32;LCD------------//</emphasis>
+43 &#32;&#32;&#32;
+44 &#32;&#32;&#32;&#32;*Control_PORT&#32;|=&#32;0x01;
+45 &#32;&#32;&#32;&#32;*Data_PORT&#32;=&#32;0x30;
+46 &#32;&#32;&#32;&#32;*Control_PORT&#32;&amp;=&#32;~0x01;
+47 &#32;&#32;&#32;&#32;_delay_ms(1);
+48 &#32;&#32;&#32;&#32;*Control_PORT&#32;|=&#32;0x01;
+49 &#32;&#32;&#32;&#32;*Data_PORT&#32;=&#32;0x30;
+50 &#32;&#32;&#32;&#32;*Control_PORT&#32;&amp;=&#32;~0x01;
+51 &#32;&#32;&#32;&#32;_delay_ms(1);
+52 &#32;&#32;&#32;&#32;*Control_PORT&#32;|=&#32;0x01;
+53 &#32;&#32;&#32;&#32;*Data_PORT&#32;=&#32;0x30;
+54 &#32;&#32;&#32;&#32;*Control_PORT&#32;&amp;=&#32;~0x01;
+55 &#32;&#32;&#32;&#32;_delay_ms(1);
+56 &#32;&#32;&#32;&#32;
+57 &#32;&#32;&#32;&#32;<emphasis class="comment">//------------CONFIGURE&#32;LCD&#32;BEHAVIOUR------------//</emphasis>
+58 &#32;&#32;&#32;&#32;
+59 &#32;&#32;&#32;&#32;<link linkend="_l_c_d_8c_1a3a31eadded9b6270621dfa8d8d316c31">LCD_cmd</link>(0x38);&#32;&#32;<emphasis class="comment">//&#32;8-bit&#32;interface,&#32;2-line&#32;mode,&#32;5x11&#32;dots&#32;format</emphasis>
+60 &#32;&#32;&#32;&#32;<link linkend="_l_c_d_8c_1a3a31eadded9b6270621dfa8d8d316c31">LCD_cmd</link>(0x0C);&#32;&#32;<emphasis class="comment">//&#32;display&#32;ON,&#32;cursor&#32;OFF,&#32;blink&#32;OFF</emphasis>
+61 &#32;&#32;&#32;&#32;<link linkend="_l_c_d_8c_1a3a31eadded9b6270621dfa8d8d316c31">LCD_cmd</link>(0x06);&#32;&#32;<emphasis class="comment">//&#32;cursor&#32;moves&#32;to&#32;the&#32;right,&#32;no&#32;display&#32;shift</emphasis>
+62 &#32;&#32;&#32;&#32;<link linkend="_l_c_d_8c_1a3a31eadded9b6270621dfa8d8d316c31">LCD_cmd</link>(0x01);&#32;&#32;<emphasis class="comment">//&#32;clear&#32;display</emphasis>
+63 
+64 <emphasis class="preprocessor">&#32;&#32;#endif</emphasis>
+65 
+66 <emphasis class="preprocessor">&#32;&#32;#ifdef&#32;FOUR_BITS</emphasis>
+67 &#32;&#32;
+68 &#32;&#32;&#32;<emphasis class="comment">//------------RESET&#32;THE&#32;LCD------------//</emphasis>
+69 &#32;&#32;
+70 &#32;&#32;&#32;*Control_PORT&#32;|=&#32;(0x01&#32;&lt;&lt;&#32;5);
+71 &#32;&#32;&#32;*Data_PORT&#32;|=&#32;0x03;
+72 &#32;&#32;&#32;*Control_PORT&#32;&amp;=&#32;~(0x01&#32;&lt;&lt;&#32;5);
+73 &#32;&#32;&#32;_delay_ms(1);
+74 &#32;&#32;&#32;*Control_PORT&#32;|=&#32;(0x01&#32;&lt;&lt;&#32;5);
+75 &#32;&#32;&#32;*Data_PORT&#32;|=&#32;0x03;
+76 &#32;&#32;&#32;*Control_PORT&#32;&amp;=&#32;~(0x01&#32;&lt;&lt;&#32;5);
+77 &#32;&#32;&#32;_delay_ms(1);
+78 &#32;&#32;&#32;*Control_PORT&#32;|=&#32;(0x01&#32;&lt;&lt;&#32;5);
+79 &#32;&#32;&#32;*Data_PORT&#32;|=&#32;0x03;
+80 &#32;&#32;&#32;*Control_PORT&#32;&amp;=&#32;~(0x01&#32;&lt;&lt;&#32;5);
+81 &#32;&#32;&#32;*Data_PORT&#32;&amp;=&#32;~0x0F;
+82 &#32;&#32;&#32;_delay_ms(1);
+83 &#32;&#32;&#32;*Control_PORT&#32;|=&#32;(0x01&#32;&lt;&lt;&#32;5);
+84 &#32;&#32;&#32;*Data_PORT&#32;|=&#32;0x02;
+85 &#32;&#32;&#32;*Control_PORT&#32;&amp;=&#32;~(0x01&#32;&lt;&lt;&#32;5);
+86 &#32;&#32;&#32;*Data_PORT&#32;&amp;=&#32;~0x0F;
+87 &#32;&#32;&#32;_delay_ms(1);
+88 &#32;&#32;&#32;
+89 &#32;&#32;&#32;<emphasis class="comment">//------------CONFIGURE&#32;LCD&#32;BEHAVIOUR------------//</emphasis>
+90 &#32;&#32;&#32;
+91 &#32;&#32;&#32;<link linkend="_l_c_d_8c_1a3a31eadded9b6270621dfa8d8d316c31">LCD_cmd</link>(0x28);&#32;&#32;&#32;<emphasis class="comment">//&#32;4-bit&#32;interface,&#32;2-line&#32;mode,&#32;5x11&#32;dots&#32;format</emphasis>
+92 &#32;&#32;&#32;<link linkend="_l_c_d_8c_1a3a31eadded9b6270621dfa8d8d316c31">LCD_cmd</link>(0x0C);&#32;&#32;&#32;<emphasis class="comment">//&#32;display&#32;ON,&#32;cursor&#32;OFF,&#32;blink&#32;OFF</emphasis>
+93 &#32;&#32;&#32;<link linkend="_l_c_d_8c_1a3a31eadded9b6270621dfa8d8d316c31">LCD_cmd</link>(0x06);&#32;&#32;&#32;<emphasis class="comment">//&#32;cursor&#32;moves&#32;to&#32;the&#32;right,&#32;no&#32;display&#32;shift</emphasis>
+94 &#32;&#32;&#32;<link linkend="_l_c_d_8c_1a3a31eadded9b6270621dfa8d8d316c31">LCD_cmd</link>(0x01);&#32;&#32;&#32;<emphasis class="comment">//&#32;clear&#32;display</emphasis>
+95 
+96 <emphasis class="preprocessor">&#32;&#32;#endif</emphasis>
+97 &#32;}
+98 
+<link linkend="_l_c_d_8h_1a3a31eadded9b6270621dfa8d8d316c31">103 </link>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_l_c_d_8c_1a3a31eadded9b6270621dfa8d8d316c31">LCD_cmd</link>(uint8&#32;cmd){
+104 &#32;&#32;&#32;&#32;
+105 <emphasis class="preprocessor">&#32;&#32;#ifdef&#32;EIGHT_BITS</emphasis>
+106 &#32;&#32;&#32;&#32;
+107 &#32;&#32;&#32;&#32;<emphasis class="comment">//------------SEND&#32;8-BIT&#32;COMMAND------------//</emphasis>
+108 &#32;&#32;&#32;&#32;
+109 &#32;&#32;&#32;&#32;*<link linkend="_l_c_d_8c_1aad4f3a80425e5d4ad7d757bc396d891c">C_PORT</link>&#32;|=&#32;0x01;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;enable&#32;LCD&#32;interface&#32;for&#32;new&#32;data&#32;(EN&#32;signal),&#32;Command&#32;register&#32;is&#32;selected</emphasis>
+110 &#32;&#32;&#32;&#32;_delay_us(600);
+111 &#32;&#32;&#32;&#32;*<link linkend="_l_c_d_8c_1aced57bb37a8f8c3c0a87d6a3af97fa0f">D_PORT</link>&#32;=&#32;cmd;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;send&#32;entire&#32;8-bit&#32;command</emphasis>
+112 &#32;&#32;&#32;&#32;_delay_us(600);
+113 &#32;&#32;&#32;&#32;*<link linkend="_l_c_d_8c_1aad4f3a80425e5d4ad7d757bc396d891c">C_PORT</link>&#32;&amp;=&#32;~0x01;&#32;&#32;&#32;<emphasis class="comment">//&#32;clear&#32;control&#32;port</emphasis>
+114 
+115 <emphasis class="preprocessor">&#32;&#32;#endif</emphasis>
+116 &#32;&#32;&#32;&#32;
+117 <emphasis class="preprocessor">&#32;&#32;#ifdef&#32;FOUR_BITS</emphasis>
+118 &#32;&#32;&#32;&#32;
+119 &#32;&#32;&#32;&#32;<emphasis class="comment">//------------SEND&#32;HIGH&#32;NIBBLE------------//</emphasis>
+120 &#32;&#32;&#32;&#32;
+121 &#32;&#32;&#32;&#32;*<link linkend="_l_c_d_8c_1aad4f3a80425e5d4ad7d757bc396d891c">C_PORT</link>&#32;|=&#32;(0x01&#32;&lt;&lt;&#32;5);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;enable&#32;LCD&#32;interface&#32;for&#32;new&#32;data&#32;(EN&#32;signal),&#32;Command&#32;register&#32;is&#32;selected</emphasis>
+122 &#32;&#32;&#32;&#32;_delay_us(800);
+123 &#32;&#32;&#32;&#32;*<link linkend="_l_c_d_8c_1aced57bb37a8f8c3c0a87d6a3af97fa0f">D_PORT</link>&#32;|=&#32;((cmd&#32;&gt;&gt;&#32;4)&#32;&amp;&#32;0x0F);&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;send&#32;high&#32;nibble&#32;of&#32;command</emphasis>
+124 &#32;&#32;&#32;&#32;_delay_us(800);
+125 &#32;&#32;&#32;&#32;*<link linkend="_l_c_d_8c_1aad4f3a80425e5d4ad7d757bc396d891c">C_PORT</link>&#32;&amp;=&#32;~(0x01&#32;&lt;&lt;&#32;5);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;clear&#32;control&#32;port</emphasis>
+126 &#32;&#32;&#32;&#32;_delay_us(200);
+127 &#32;&#32;&#32;&#32;*<link linkend="_l_c_d_8c_1aced57bb37a8f8c3c0a87d6a3af97fa0f">D_PORT</link>&#32;&amp;=&#32;~0x0F;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;clear&#32;data&#32;port</emphasis>
+128 
+129 &#32;&#32;&#32;&#32;<emphasis class="comment">//------------SEND&#32;LOW&#32;NIBBLE------------//</emphasis>
+130 
+131 &#32;&#32;&#32;&#32;*<link linkend="_l_c_d_8c_1aad4f3a80425e5d4ad7d757bc396d891c">C_PORT</link>&#32;|=&#32;(0x01&#32;&lt;&lt;&#32;5);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;enable&#32;LCD&#32;interface&#32;for&#32;new&#32;data&#32;(EN&#32;signal),&#32;Command&#32;register&#32;is&#32;selected</emphasis>
+132 &#32;&#32;&#32;&#32;_delay_us(800);
+133 &#32;&#32;&#32;&#32;*<link linkend="_l_c_d_8c_1aced57bb37a8f8c3c0a87d6a3af97fa0f">D_PORT</link>&#32;|=&#32;(cmd&#32;&amp;&#32;0x0F);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;send&#32;low&#32;nibble&#32;of&#32;command</emphasis>
+134 &#32;&#32;&#32;&#32;_delay_us(800);
+135 &#32;&#32;&#32;&#32;*<link linkend="_l_c_d_8c_1aad4f3a80425e5d4ad7d757bc396d891c">C_PORT</link>&#32;&amp;=&#32;~(0x01&#32;&lt;&lt;&#32;5);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;clear&#32;control&#32;port</emphasis>
+136 &#32;&#32;&#32;&#32;_delay_us(200);
+137 &#32;&#32;&#32;&#32;*<link linkend="_l_c_d_8c_1aced57bb37a8f8c3c0a87d6a3af97fa0f">D_PORT</link>&#32;&amp;=&#32;~0x0F;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;clear&#32;data&#32;port</emphasis>
+138 &#32;&#32;&#32;&#32;
+139 <emphasis class="preprocessor">&#32;&#32;&#32;#endif</emphasis>
+140 &#32;}
+141 
+<link linkend="_l_c_d_8h_1ab3d3c08a4027d3e918914c1562ced027">145 </link>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_l_c_d_8c_1ab3d3c08a4027d3e918914c1562ced027">LCD_clear</link>(<emphasis class="keywordtype">void</emphasis>){
+146 
+147 &#32;&#32;&#32;&#32;<link linkend="_l_c_d_8c_1a3a31eadded9b6270621dfa8d8d316c31">LCD_cmd</link>(0x01);&#32;&#32;<emphasis class="comment">//&#32;clear&#32;display&#32;command</emphasis>
+148 
+149 &#32;}
+150 
+<link linkend="_l_c_d_8h_1a765b548007c2dd1324208afcc7c02085">156 </link>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_l_c_d_8c_1a765b548007c2dd1324208afcc7c02085">LCD_set_cursor</link>(uint8&#32;row,&#32;uint8&#32;col){
+157 
+158 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">switch</emphasis>(row){
+159 
+160 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;0:&#32;<link linkend="_l_c_d_8c_1a3a31eadded9b6270621dfa8d8d316c31">LCD_cmd</link>(0x80|col);&#32;&#32;<emphasis class="comment">//&#32;first&#32;row</emphasis>
+161 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+162 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;1:&#32;<link linkend="_l_c_d_8c_1a3a31eadded9b6270621dfa8d8d316c31">LCD_cmd</link>(0xC0|col);&#32;&#32;<emphasis class="comment">//&#32;second&#32;row</emphasis>
+163 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+164 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;2:&#32;<link linkend="_l_c_d_8c_1a3a31eadded9b6270621dfa8d8d316c31">LCD_cmd</link>(0x94|col);&#32;&#32;<emphasis class="comment">//&#32;third&#32;row</emphasis>
+165 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+166 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;3:&#32;<link linkend="_l_c_d_8c_1a3a31eadded9b6270621dfa8d8d316c31">LCD_cmd</link>(0xD4|col);&#32;&#32;<emphasis class="comment">//&#32;fourth&#32;row</emphasis>
+167 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+168 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">default</emphasis>:&#32;<link linkend="_l_c_d_8c_1a3a31eadded9b6270621dfa8d8d316c31">LCD_cmd</link>(0x80|col);&#32;<emphasis class="comment">//&#32;default&#32;is&#32;first&#32;row</emphasis>
+169 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+170 &#32;&#32;&#32;&#32;
+171 &#32;&#32;&#32;&#32;}
+172 &#32;&#32;}
+173 
+<link linkend="_l_c_d_8h_1abe209ff480fbd38f3a9b4e03fab286fb">178 </link>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_l_c_d_8c_1abe209ff480fbd38f3a9b4e03fab286fb">LCD_write_chr</link>(<emphasis class="keywordtype">char</emphasis>&#32;data){
+179 &#32;&#32;
+180 &#32;&#32;<emphasis class="comment">//------------SEND&#32;8-BIT&#32;DATA------------//</emphasis>
+181 &#32;&#32;&#32;&#32;
+182 <emphasis class="preprocessor">&#32;&#32;#ifdef&#32;EIGHT_BITS</emphasis>
+183 &#32;&#32;
+184 &#32;&#32;&#32;&#32;*<link linkend="_l_c_d_8c_1aad4f3a80425e5d4ad7d757bc396d891c">C_PORT</link>&#32;|=&#32;0x02;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;select&#32;Data&#32;register&#32;(RS&#32;signal)</emphasis>
+185 &#32;&#32;&#32;&#32;_delay_us(600);
+186 &#32;&#32;&#32;&#32;*<link linkend="_l_c_d_8c_1aad4f3a80425e5d4ad7d757bc396d891c">C_PORT</link>&#32;|=&#32;0x03;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;enable&#32;LCD&#32;interface&#32;for&#32;new&#32;data&#32;(EN&#32;signal)</emphasis>
+187 &#32;&#32;&#32;&#32;_delay_us(600);
+188 &#32;&#32;&#32;&#32;*<link linkend="_l_c_d_8c_1aced57bb37a8f8c3c0a87d6a3af97fa0f">D_PORT</link>&#32;=&#32;data;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;send&#32;entire&#32;8-bit&#32;data</emphasis>
+189 &#32;&#32;&#32;&#32;_delay_us(600);
+190 &#32;&#32;&#32;&#32;*<link linkend="_l_c_d_8c_1aad4f3a80425e5d4ad7d757bc396d891c">C_PORT</link>&#32;&amp;=&#32;~0x03;&#32;&#32;&#32;<emphasis class="comment">//&#32;clear&#32;control&#32;port</emphasis>
+191 
+192 <emphasis class="preprocessor">&#32;&#32;#endif</emphasis>
+193 
+194 <emphasis class="preprocessor">&#32;&#32;#ifdef&#32;FOUR_BITS</emphasis>
+195 &#32;&#32;
+196 &#32;&#32;&#32;&#32;<emphasis class="comment">//------------SEND&#32;HIGH&#32;NIBBLE------------//</emphasis>
+197 &#32;&#32;
+198 &#32;&#32;&#32;&#32;*<link linkend="_l_c_d_8c_1aad4f3a80425e5d4ad7d757bc396d891c">C_PORT</link>&#32;|=&#32;(0x02&#32;&lt;&lt;&#32;5);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;select&#32;Data&#32;register&#32;(RS&#32;signal)</emphasis>
+199 &#32;&#32;&#32;&#32;_delay_us(800);
+200 &#32;&#32;&#32;&#32;*<link linkend="_l_c_d_8c_1aad4f3a80425e5d4ad7d757bc396d891c">C_PORT</link>&#32;|=&#32;(0x03&#32;&lt;&lt;&#32;5);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;enable&#32;LCD&#32;interface&#32;for&#32;new&#32;data&#32;(EN&#32;signal)</emphasis>
+201 &#32;&#32;&#32;&#32;_delay_us(800);
+202 &#32;&#32;&#32;&#32;*<link linkend="_l_c_d_8c_1aced57bb37a8f8c3c0a87d6a3af97fa0f">D_PORT</link>&#32;|=&#32;((data&#32;&gt;&gt;&#32;4)&#32;&amp;&#32;0x0F);&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;send&#32;high&#32;nibble&#32;of&#32;data</emphasis>
+203 &#32;&#32;&#32;&#32;_delay_us(800);
+204 &#32;&#32;&#32;&#32;*<link linkend="_l_c_d_8c_1aad4f3a80425e5d4ad7d757bc396d891c">C_PORT</link>&#32;&amp;=&#32;~(0x03&#32;&lt;&lt;&#32;5);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;clear&#32;control&#32;port&#32;&#32;&#32;</emphasis>
+205 &#32;&#32;&#32;&#32;_delay_us(200);
+206 &#32;&#32;&#32;&#32;*<link linkend="_l_c_d_8c_1aced57bb37a8f8c3c0a87d6a3af97fa0f">D_PORT</link>&#32;&amp;=&#32;~0x0F;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;clear&#32;data&#32;port</emphasis>
+207 &#32;&#32;&#32;&#32;
+208 &#32;&#32;&#32;&#32;<emphasis class="comment">//------------SEND&#32;LOW&#32;NIBBLE------------//</emphasis>
+209 &#32;&#32;&#32;&#32;
+210 &#32;&#32;&#32;&#32;*<link linkend="_l_c_d_8c_1aad4f3a80425e5d4ad7d757bc396d891c">C_PORT</link>&#32;|=&#32;(0x02&#32;&lt;&lt;&#32;5);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;select&#32;Data&#32;register&#32;(RS&#32;signal)</emphasis>
+211 &#32;&#32;&#32;&#32;_delay_us(800);
+212 &#32;&#32;&#32;&#32;*<link linkend="_l_c_d_8c_1aad4f3a80425e5d4ad7d757bc396d891c">C_PORT</link>&#32;|=&#32;(0x03&#32;&lt;&lt;&#32;5);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;enable&#32;LCD&#32;interface&#32;for&#32;new&#32;data&#32;(EN&#32;signal)</emphasis>
+213 &#32;&#32;&#32;&#32;_delay_us(800);
+214 &#32;&#32;&#32;&#32;*<link linkend="_l_c_d_8c_1aced57bb37a8f8c3c0a87d6a3af97fa0f">D_PORT</link>&#32;|=&#32;(data&#32;&amp;&#32;0x0F);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;send&#32;low&#32;nibble&#32;of&#32;data</emphasis>
+215 &#32;&#32;&#32;&#32;_delay_us(800);
+216 &#32;&#32;&#32;&#32;*<link linkend="_l_c_d_8c_1aad4f3a80425e5d4ad7d757bc396d891c">C_PORT</link>&#32;&amp;=&#32;~(0x03&#32;&lt;&lt;&#32;5);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;clear&#32;control&#32;port&#32;&#32;&#32;</emphasis>
+217 &#32;&#32;&#32;&#32;_delay_us(200);
+218 &#32;&#32;&#32;&#32;*<link linkend="_l_c_d_8c_1aced57bb37a8f8c3c0a87d6a3af97fa0f">D_PORT</link>&#32;&amp;=&#32;~0x0F;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;clear&#32;data&#32;port</emphasis>
+219 
+220 <emphasis class="preprocessor">&#32;&#32;&#32;&#32;#endif</emphasis>
+221 }
+222 
+<link linkend="_l_c_d_8h_1a24b307a9125b415e76b51e3d9e0b22ef">227 </link>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_l_c_d_8c_1a24b307a9125b415e76b51e3d9e0b22ef">LCD_write_string</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*&#32;data){
+228 
+229 &#32;&#32;&#32;<emphasis class="keywordflow">while</emphasis>(*data&#32;!=&#32;<emphasis class="charliteral">&apos;\0&apos;</emphasis>)
+230 
+231 &#32;&#32;&#32;<link linkend="_l_c_d_8c_1abe209ff480fbd38f3a9b4e03fab286fb">LCD_write_chr</link>(*data++);&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;iterate&#32;through&#32;the&#32;array&#32;till&#32;the&#32;NULL&#32;terminator</emphasis>
+232 
+233 &#32;}
+234 &#32;
+<link linkend="_l_c_d_8h_1af15a9ff92f4da521914c61f4f19d568c">239 </link>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_l_c_d_8c_1af15a9ff92f4da521914c61f4f19d568c">LCD_write_int</link>(uint16&#32;data){
+240 &#32;&#32;&#32;&#32;&#32;
+241 &#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">char</emphasis>&#32;res[7];
+242 &#32;&#32;&#32;&#32;&#32;itoa(data,&#32;res,&#32;10);&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;convert&#32;integer&#32;number&#32;to&#32;a&#32;string</emphasis>
+243 &#32;&#32;&#32;&#32;&#32;<link linkend="_l_c_d_8c_1a24b307a9125b415e76b51e3d9e0b22ef">LCD_write_string</link>(res);&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;send&#32;the&#32;converted&#32;string</emphasis>
+244 &#32;&#32;&#32;&#32;&#32;
+245 &#32;}
+246 &#32;
+<link linkend="_l_c_d_8h_1a8ab35ac01f1276b81c720aaae182f3a9">251 </link>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_l_c_d_8c_1a8ab35ac01f1276b81c720aaae182f3a9">LCD_write_float</link>(<emphasis class="keywordtype">float</emphasis>&#32;data){
+252 &#32;&#32;&#32;&#32;&#32;
+253 &#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">char</emphasis>&#32;res[7];
+254 &#32;&#32;&#32;&#32;&#32;dtostrf(data,&#32;6,&#32;2,res);&#32;&#32;&#32;<emphasis class="comment">//&#32;convert&#32;float&#32;number&#32;to&#32;a&#32;string</emphasis>
+255 &#32;&#32;&#32;&#32;&#32;<link linkend="_l_c_d_8c_1a24b307a9125b415e76b51e3d9e0b22ef">LCD_write_string</link>(res);&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;send&#32;the&#32;converted&#32;string</emphasis>
+256 &#32;&#32;&#32;&#32;&#32;
+257 &#32;}
+258 
+259 &#32;
+    </computeroutput></literallayout>
+</section>

@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a_d_c_8c">
+    <title>ADC.c File Reference</title>
+    <programlisting>#include &quot;ADC.h&quot;</programlisting>
+<para>Include dependency diagram for ADC.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_a_d_c_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for ADC.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_a_d_c_8c__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_d_c_8c_1a0e7f322a9d901899bd27b47e00ab5bc5">ADC_Init</link> (
+uint8 Vref, uint8 Left_Adj, uint8 Prescaler)<para><emphasis>initializes the ADC in single ended conversion mode</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint16 <link linkend="_a_d_c_8c_1a8fb3fd12a9b559df1652600291e1cfc9">ADC_Read</link> (
+uint8 Channel)<para><emphasis>triggers instant conversion for the selected channel</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>includes function definitions </para>
+
+<para><formalpara><title>Author: </title>
+
+<para>Loay Ashraf </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>1.0.0 </para>
+</formalpara>
+<formalpara><title>Precondition: </title>
+
+<para>include <link linkend="_a_d_c_8h">ADC.h</link> </para>
+</formalpara>
+<para><link linkend="bug_1_bug000001">Bug</link> 
+<para>no known bugs </para>
+</para><formalpara><title>See also: </title>
+
+<para><link linkend="_a_d_c_8h">ADC.h</link> </para>
+</formalpara>
+</para>
+    <para>Definition in file D:/Engineering/Software Development/Embedded/AVR/Projects/Car_Bluetooth/Car_Bluetooth/ADC.c</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+10 <emphasis class="comment">//------------INCLUDE&#32;DRIVER&#32;HEADER&#32;FILE------------//</emphasis>
+11 
+12 <emphasis class="preprocessor">&#32;#include&#32;&quot;<link linkend="_a_d_c_8h">ADC.h</link>&quot;</emphasis>
+13 
+<link linkend="_a_d_c_8h_1a0e7f322a9d901899bd27b47e00ab5bc5">21 </link>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_d_c_8c_1a0e7f322a9d901899bd27b47e00ab5bc5">ADC_Init</link>(uint8&#32;Vref,&#32;uint8&#32;Left_Adj,&#32;uint8&#32;Prescaler){
+22 
+23 &#32;&#32;&#32;&#32;uint8&#32;P_Bits&#32;=&#32;(int)&#32;(log(Prescaler)/log(2));&#32;&#32;&#32;<emphasis class="comment">//&#32;calculate&#32;prescaler&#32;bits</emphasis>
+24 &#32;&#32;&#32;&#32;ADMUX&#32;|=&#32;(Vref&lt;&lt;6);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;set&#32;the&#32;reference&#32;voltage&#32;bits</emphasis>
+25 &#32;&#32;&#32;&#32;ADMUX&#32;|=&#32;(Left_Adj&lt;&lt;5);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;set&#32;data&#32;adjustment&#32;bits</emphasis>
+26 &#32;&#32;&#32;&#32;ADCSRA&#32;|=&#32;P_Bits;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;set&#32;prescaler&#32;bits</emphasis>
+27 &#32;&#32;&#32;&#32;ADCSRA&#32;|=&#32;(1&lt;&lt;ADEN);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;enable&#32;the&#32;ADC</emphasis>
+28 
+29 &#32;}
+<link linkend="_a_d_c_8h_1a8fb3fd12a9b559df1652600291e1cfc9">35 </link>&#32;uint16&#32;<link linkend="_a_d_c_8c_1a8fb3fd12a9b559df1652600291e1cfc9">ADC_Read</link>(uint8&#32;Channel){
+36 &#32;&#32;&#32;&#32;
+37 &#32;&#32;&#32;&#32;ADMUX&#32;&amp;=&#32;~((1&lt;&lt;MUX0)&#32;|&#32;(1&lt;&lt;MUX1)&#32;|&#32;(1&lt;&lt;MUX2));&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;clear&#32;channel&#32;multiplexer&#32;bits</emphasis>
+38 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(Channel&#32;&lt;&#32;8)
+39 &#32;&#32;&#32;&#32;ADMUX&#32;|=&#32;Channel;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;set&#32;channel&#32;bits</emphasis>
+40 &#32;&#32;&#32;&#32;ADCSRA&#32;|=&#32;(1&lt;&lt;ADSC);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;trigger&#32;ADC&#32;conversion</emphasis>
+41 
+42 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">while</emphasis>(!(ADCSRA&#32;&amp;&#32;(1&lt;&lt;ADIF)));&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;wait&#32;for&#32;the&#32;conversion&#32;to&#32;finish</emphasis>
+43 
+44 &#32;&#32;&#32;&#32;ADCSRA&#32;|=&#32;(1&lt;&lt;ADIF);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;clear&#32;&quot;conversion&#32;finished&quot;&#32;flag</emphasis>
+45 
+46 &#32;&#32;&#32;&#32;_delay_ms(1);
+47 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;ADC;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;return&#32;the&#32;value&#32;in&#32;the&#32;ADC&#32;Data&#32;register</emphasis>
+48 
+49 &#32;}
+    </computeroutput></literallayout>
+</section>

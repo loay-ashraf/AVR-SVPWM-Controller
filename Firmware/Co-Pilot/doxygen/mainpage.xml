@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>About</title>
+
+<para><formalpara><title>Author: </title>
+
+<para>Loay Ashraf <link xlink:href="mailto:loay.ashraf.96@gmail.com">loay.ashraf.96@gmail.com</link> </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>1.0.0</para>
+</formalpara>
+This program is implemented on ATmega16/32 running at 16 MHZ CPU clock, it basically receives commands from Android companion application via Bluetooth using the widely common HC-05 Bluetooth Module, it acts upon the command received by -for example- turning ON a relay which activates certain feature of the vehicle; means of feedback include battery voltage and speed of the motor.</para>
+
+<para><formalpara><title></title>
+<title>Pin Assignments</title>
+<para></para>
+</formalpara>
+<itemizedlist>
+<listitem>
+<para>PB0-7: DAC output signal</para>
+</listitem><listitem>
+<para>PC0-7, PD6-7: Relay output signal</para>
+</listitem><listitem>
+<para>PD0: USART RX signal</para>
+</listitem><listitem>
+<para>PD1: USART TX signal</para>
+</listitem></itemizedlist>
+</para>
+
+<para><formalpara><title>See also: </title>
+
+<para><link linkend="main_8c">main.c</link> </para>
+</formalpara>
+</para>
+
+</chapter>

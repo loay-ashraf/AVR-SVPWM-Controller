@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a_d_c_8h">
+    <title>ADC.h File Reference</title>
+    <programlisting>#include &quot;micro_config.h&quot;</programlisting>
+<para>Include dependency diagram for ADC.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_a_d_c_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for ADC.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_a_d_c_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Macros</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_a_d_c_8h_1ad4eed9284dd1d5cddf07e8de0ee8655c">AREF</link> 0</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_a_d_c_8h_1a81592bb36513786401847e105e8f9c4c">AVCC</link> 1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_a_d_c_8h_1acafbfeacf4d8028f4a43e95603e9bce5">INT_REF</link> 3</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_a_d_c_8h_1a07ec6742735bca13eb05f445755d0c04">RIGHT_ADJ</link> 0</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_a_d_c_8h_1ab0565e25db14ce221c11f81b05ef76fe">LEFT_ADJ</link> 1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_a_d_c_8h_1a0d2ea0f4a8dd17bf08e69d05deacbcb5">ADC0</link> 0</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_a_d_c_8h_1a90d2d5c526ce5c0a551f533eccbee71a">ADC1</link> 1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_a_d_c_8h_1ac5503ae96c26b4475226f96715a1bf1e">ADC2</link> 2</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_a_d_c_8h_1ae917784606daf6b04c9b7b96b40c2f74">ADC3</link> 3</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_a_d_c_8h_1af89e07bd5958276f10d90865d55628ff">ADC4</link> 4</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_a_d_c_8h_1a020c5b6c4035e47763ee9e6d4ad60be9">ADC5</link> 5</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_a_d_c_8h_1a25d80c29e183678c05dfaacdf7959904">ADC6</link> 6</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_a_d_c_8h_1a923ac615a38786ff677ec50a4ce96794">ADC7</link> 7</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_d_c_8h_1a0e7f322a9d901899bd27b47e00ab5bc5">ADC_Init</link> (
+uint8 Vref, uint8 Left_Adj, uint8 Prescaler)<para><emphasis>initializes the ADC in single ended conversion mode</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint16 <link linkend="_a_d_c_8h_1a8fb3fd12a9b559df1652600291e1cfc9">ADC_Read</link> (
+uint8 Channel)<para><emphasis>triggers instant conversion for the selected channel</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>This driver supports interfacing ADC modules of 8-bit AVR MCU; this file includes function prototypes for <link linkend="_a_d_c_8c">ADC.c</link>. </para>
+
+<para><formalpara><title>Author: </title>
+
+<para>Loay Ashraf </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>1.0.0 </para>
+</formalpara>
+<formalpara><title>Precondition: </title>
+
+<para>include delay.h and math.h in <link linkend="micro__config_8h">micro_config.h</link> </para>
+</formalpara>
+<para><link linkend="bug_1_bug000002">Bug</link> 
+<para>no known bugs </para>
+</para><formalpara><title>See also: </title>
+
+<para><link linkend="micro__config_8h">micro_config.h</link> </para>
+</formalpara>
+</para>
+    <para>Definition in file D:/Engineering/Software Development/Embedded/AVR/Projects/Car_Bluetooth/Car_Bluetooth/ADC.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+12 <emphasis class="preprocessor">#ifndef&#32;ADC_H_</emphasis>
+13 <emphasis class="preprocessor">#define&#32;ADC_H_</emphasis>
+14 
+15 <emphasis class="comment">//------------INCLUDE&#32;MCU&#32;CONFIGURATION------------//</emphasis>
+16 
+17 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="micro__config_8h">micro_config.h</link>&quot;</emphasis>
+18 
+19 <emphasis class="comment">//------------DEFINE&#32;ADC&#32;PARAETERS&#32;ABBREVIATIONS------------//</emphasis>
+20 
+21 <emphasis class="preprocessor">#define&#32;AREF&#32;0</emphasis>
+22 <emphasis class="preprocessor">#define&#32;AVCC&#32;1</emphasis>
+23 <emphasis class="preprocessor">#define&#32;INT_REF&#32;3</emphasis>
+24 <emphasis class="preprocessor">#define&#32;RIGHT_ADJ&#32;0</emphasis>
+25 <emphasis class="preprocessor">#define&#32;LEFT_ADJ&#32;1</emphasis>
+26 <emphasis class="preprocessor">#define&#32;ADC0&#32;0</emphasis>
+27 <emphasis class="preprocessor">#define&#32;ADC1&#32;1</emphasis>
+28 <emphasis class="preprocessor">#define&#32;ADC2&#32;2</emphasis>
+29 <emphasis class="preprocessor">#define&#32;ADC3&#32;3</emphasis>
+30 <emphasis class="preprocessor">#define&#32;ADC4&#32;4</emphasis>
+31 <emphasis class="preprocessor">#define&#32;ADC5&#32;5</emphasis>
+32 <emphasis class="preprocessor">#define&#32;ADC6&#32;6</emphasis>
+33 <emphasis class="preprocessor">#define&#32;ADC7&#32;7</emphasis>
+34 
+35 <emphasis class="comment">//------------FUNCTION&#32;PROTOTYPES------------//</emphasis>
+36 
+37 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_d_c_8h_1a0e7f322a9d901899bd27b47e00ab5bc5">ADC_Init</link>(uint8&#32;Vref,&#32;uint8&#32;Left_Adj,&#32;uint8&#32;Prescaler);
+38 uint16&#32;<link linkend="_a_d_c_8h_1a8fb3fd12a9b559df1652600291e1cfc9">ADC_Read</link>(uint8&#32;Channel);
+39 
+40 
+41 <emphasis class="preprocessor">#endif&#32;</emphasis><emphasis class="comment">/*&#32;ADC_H_&#32;*/</emphasis><emphasis class="preprocessor"></emphasis>
+    </computeroutput></literallayout>
+</section>

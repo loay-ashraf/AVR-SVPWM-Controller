@@ -1,0 +1,297 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="main_8c">
+    <title>main.c File Reference</title>
+    <programlisting>#include &quot;ADC.h&quot;</programlisting>
+    <programlisting>#include &quot;USART.h&quot;</programlisting>
+<para>Include dependency diagram for main.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="main_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for main.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="main_8c__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>char * <link linkend="main_8c_1a1737762c18769d6f24ab6f08db816636">received_ptr</link><para><emphasis>Stores memory address of received command.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>char <link linkend="main_8c_1a2c559caab93e83086882bf2a584b5d34">received_str</link><para><emphasis>Stores data of received command.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>char <link linkend="main_8c_1a8a38932f68864d9dd42b205d2a9e4283">res_str</link><para><emphasis>Stores result of float conversion.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>char <link linkend="main_8c_1a3c5791505a851932128288243c2c70bc">ON_flag</link><para><emphasis>Stores ON status of the all features (0 for OFF, 1 for ON)</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float <link linkend="main_8c_1a72439c9f0df704405eca3b40858229d0">Volt</link><para><emphasis>Current battery voltage value.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float <link linkend="main_8c_1a61efabcca15cccefe7d85ea6da6af5e3">Speed</link><para><emphasis>Current motor speed value.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8 <link linkend="main_8c_1a35da44c370602131b873e853934c34cf">i</link><para><emphasis>Counter that iterates through received command.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8 <link linkend="main_8c_1a1235d2561f8f0911d937e02a0766786a">thumb_position</link><para><emphasis>Stores current slider position in the android app.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="main_8c_1a840291bc02cba5474a4cb46a9b9566fe">main</link> (
+void )<para><emphasis>the main function</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>includes the main function </para>
+
+<para>the main function periodically checks for incoming commands via USART interface, if one is received it starts processing the command and takes the action that corresponds to the command received.</para>
+
+<para><formalpara><title>Author: </title>
+
+<para>Loay Ashraf </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>1.0.0 </para>
+</formalpara>
+<formalpara><title>Precondition: </title>
+
+<para>include <link linkend="_u_s_a_r_t_8h">USART.h</link>, string.h and set F_CPU in <link linkend="micro__config_8h">micro_config.h</link> </para>
+</formalpara>
+<para><link linkend="bug_1_bug000003">Bug</link> 
+<para>no known bugs </para>
+</para><formalpara><title>See also: </title>
+
+<para><link linkend="micro__config_8h">micro_config.h</link> </para>
+</formalpara>
+</para>
+    <para>Definition in file D:/Engineering/Software Development/Embedded/AVR/Projects/Car_Bluetooth/Car_Bluetooth/main.c</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+37 <emphasis class="comment">//------------INCLUDE&#32;DEVICE&#32;DRIVERS------------//</emphasis>
+38 
+39 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="_a_d_c_8h">ADC.h</link>&quot;</emphasis>
+40 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="_u_s_a_r_t_8h">USART.h</link>&quot;</emphasis>
+41 
+42 <emphasis class="comment">//------------DECLARE&#32;GLOBAL&#32;VARIABLES------------//</emphasis>
+<link linkend="main_8c_1a1737762c18769d6f24ab6f08db816636">75 </link><emphasis class="comment"></emphasis><emphasis class="keywordtype">char</emphasis>&#32;*&#32;<link linkend="main_8c_1a1737762c18769d6f24ab6f08db816636">received_ptr</link>;
+<link linkend="main_8c_1a8a38932f68864d9dd42b205d2a9e4283">76 </link><emphasis class="keywordtype">char</emphasis>&#32;<link linkend="main_8c_1a2c559caab93e83086882bf2a584b5d34">received_str</link>[10],&#32;<link linkend="main_8c_1a8a38932f68864d9dd42b205d2a9e4283">res_str</link>[7],&#32;<link linkend="main_8c_1a3c5791505a851932128288243c2c70bc">ON_flag</link>[7];
+<link linkend="main_8c_1a72439c9f0df704405eca3b40858229d0">77 </link><emphasis class="keywordtype">float</emphasis>&#32;<link linkend="main_8c_1a72439c9f0df704405eca3b40858229d0">Volt</link>,&#32;<link linkend="main_8c_1a61efabcca15cccefe7d85ea6da6af5e3">Speed</link>;&#32;
+<link linkend="main_8c_1a1235d2561f8f0911d937e02a0766786a">78 </link>uint8&#32;<link linkend="main_8c_1a35da44c370602131b873e853934c34cf">i</link>,&#32;<link linkend="main_8c_1a1235d2561f8f0911d937e02a0766786a">thumb_position</link>;
+79 
+<link linkend="main_8c_1a840291bc02cba5474a4cb46a9b9566fe">86 </link><emphasis class="keywordtype">int</emphasis>&#32;<link linkend="main_8c_1a840291bc02cba5474a4cb46a9b9566fe">main</link>(<emphasis class="keywordtype">void</emphasis>){
+87 &#32;&#32;&#32;&#32;
+88 &#32;&#32;&#32;&#32;<emphasis class="comment">//------------INITIALIZE&#32;I/O&#32;PORTS------------//</emphasis>
+89 &#32;&#32;&#32;&#32;
+90 &#32;&#32;&#32;&#32;DDRB&#32;=&#32;0xFF;
+91 &#32;&#32;&#32;&#32;DDRC&#32;=&#32;0xFF;
+92 &#32;&#32;&#32;&#32;DDRD&#32;=&#32;0xC0;
+93 &#32;&#32;&#32;&#32;
+94 &#32;&#32;&#32;&#32;<emphasis class="comment">//------------INITIALIZE&#32;ADC&#32;INTERFACE------------//</emphasis>
+95 &#32;&#32;&#32;&#32;
+96 &#32;&#32;&#32;&#32;<link linkend="_a_d_c_8c_1a0e7f322a9d901899bd27b47e00ab5bc5">ADC_Init</link>(AVCC,&#32;RIGHT_ADJ,&#32;128);&#32;<emphasis class="comment">//&#32;AVCC&#32;as&#32;Vref,&#32;right&#32;adjusted&#32;result&#32;(10-bit),&#32;128&#32;prescaler</emphasis>
+97 &#32;&#32;&#32;&#32;<link linkend="_a_d_c_8c_1a8fb3fd12a9b559df1652600291e1cfc9">ADC_Read</link>(ADC0);
+98 &#32;&#32;&#32;&#32;<link linkend="_a_d_c_8c_1a8fb3fd12a9b559df1652600291e1cfc9">ADC_Read</link>(ADC1);
+99 &#32;&#32;&#32;&#32;
+100 &#32;&#32;&#32;&#32;<emphasis class="comment">//------------INITIALIZE&#32;USART&#32;INTERFACE------------//</emphasis>
+101 &#32;&#32;&#32;&#32;
+102 &#32;&#32;&#32;&#32;<link linkend="_u_s_a_r_t_8c_1aad57089e8e6df3db3ddf901c43cc6972">USART_init</link>(AS,&#32;NORMAL_SPEED,&#32;8,&#32;NO_PARITY,&#32;1);&#32;&#32;<emphasis class="comment">//&#32;asynchronous,&#32;8-bit&#32;data&#32;frame,&#32;no&#32;parity&#32;check,&#32;one&#32;stop&#32;bit</emphasis>
+103 &#32;&#32;&#32;&#32;<link linkend="_u_s_a_r_t_8c_1a0826b25854bf7ff20dff32cd4b9d0231">USART_set_baudrate</link>(38400);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;38400&#32;bits/sec&#32;baud&#32;rate</emphasis>
+104 &#32;&#32;&#32;&#32;<link linkend="_u_s_a_r_t_8c_1a9477920a260c72bf21f2c5e8a06bab20">USART_enable</link>();&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;enable&#32;USART&#32;interface</emphasis>
+105 
+106 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">while</emphasis>&#32;(1){
+107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//------------RECIEVE&#32;NEW&#32;COMMAND&#32;AND&#32;PROCESS&#32;IT&#32;INTO&#32;A&#32;STRING------------//</emphasis>
+109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="main_8c_1a1737762c18769d6f24ab6f08db816636">received_ptr</link>&#32;=&#32;<link linkend="_u_s_a_r_t_8c_1ac493d991dea8232bd95474a81f4a29be">USART_Receive_str</link>();&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;receive&#32;new&#32;command</emphasis>
+111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>(<link linkend="main_8c_1a35da44c370602131b873e853934c34cf">i</link>=0;<link linkend="main_8c_1a35da44c370602131b873e853934c34cf">i</link>&lt;10;<link linkend="main_8c_1a35da44c370602131b873e853934c34cf">i</link>++)
+112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="main_8c_1a2c559caab93e83086882bf2a584b5d34">received_str</link>[<link linkend="main_8c_1a35da44c370602131b873e853934c34cf">i</link>]=*<link linkend="main_8c_1a1737762c18769d6f24ab6f08db816636">received_ptr</link>++;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;store&#32;received&#32;command&#32;data&#32;in&#32;array</emphasis>
+113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//------------CHECK&#32;RECEIVED&#32;COMMAND&#32;AND&#32;TAKE&#32;CORRESPONDING&#32;ACTION------------//</emphasis>
+115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>(!strcmp(<link linkend="main_8c_1a2c559caab93e83086882bf2a584b5d34">received_str</link>,<emphasis class="stringliteral">&quot;Voltage&quot;</emphasis>)){
+117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="main_8c_1a72439c9f0df704405eca3b40858229d0">Volt</link>&#32;=&#32;((<link linkend="_a_d_c_8c_1a8fb3fd12a9b559df1652600291e1cfc9">ADC_Read</link>(ADC0)/1023.0)*60);
+119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dtostrf(<link linkend="main_8c_1a72439c9f0df704405eca3b40858229d0">Volt</link>,&#32;6,&#32;2,<link linkend="main_8c_1a8a38932f68864d9dd42b205d2a9e4283">res_str</link>);
+120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_u_s_a_r_t_8c_1a559d0ceb6f5cfc1e928269089cf48ec7">USART_Transmit_str</link>(<link linkend="main_8c_1a8a38932f68864d9dd42b205d2a9e4283">res_str</link>);
+121 
+122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!strcmp(<link linkend="main_8c_1a2c559caab93e83086882bf2a584b5d34">received_str</link>,<emphasis class="stringliteral">&quot;RPM&quot;</emphasis>)){
+123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="main_8c_1a61efabcca15cccefe7d85ea6da6af5e3">Speed</link>&#32;=&#32;((<link linkend="_a_d_c_8c_1a8fb3fd12a9b559df1652600291e1cfc9">ADC_Read</link>(ADC1)/1023.0)*4900);
+125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dtostrf(<link linkend="main_8c_1a61efabcca15cccefe7d85ea6da6af5e3">Speed</link>,&#32;6,&#32;2,<link linkend="main_8c_1a8a38932f68864d9dd42b205d2a9e4283">res_str</link>);
+126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_u_s_a_r_t_8c_1a559d0ceb6f5cfc1e928269089cf48ec7">USART_Transmit_str</link>(<link linkend="main_8c_1a8a38932f68864d9dd42b205d2a9e4283">res_str</link>);
+127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!strcmp(<link linkend="main_8c_1a2c559caab93e83086882bf2a584b5d34">received_str</link>,<emphasis class="stringliteral">&quot;one&quot;</emphasis>)){
+129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;forward&#32;action</emphasis>
+131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PORTC&#32;|=&#32;0x01;
+132 
+133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!strcmp(<link linkend="main_8c_1a2c559caab93e83086882bf2a584b5d34">received_str</link>,<emphasis class="stringliteral">&quot;two&quot;</emphasis>)){
+134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;reverse&#32;action</emphasis>
+136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PORTC&#32;|=&#32;0x02;
+137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_delay_ms(1);
+138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PORTC&#32;|=&#32;0x01;
+139 &#32;&#32;&#32;&#32;
+140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!strcmp(<link linkend="main_8c_1a2c559caab93e83086882bf2a584b5d34">received_str</link>,<emphasis class="stringliteral">&quot;three&quot;</emphasis>)){
+141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;brake&#32;action</emphasis>
+143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PORTC&#32;|=&#32;0x04;
+144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_delay_ms(1);
+145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PORTC&#32;&amp;=&#32;~0x03;
+146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_delay_ms(10);
+147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PORTC&#32;&amp;=&#32;~0x04;
+148 
+149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!strcmp(<link linkend="main_8c_1a2c559caab93e83086882bf2a584b5d34">received_str</link>,<emphasis class="stringliteral">&quot;four&quot;</emphasis>)){
+150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;low&#32;headlights</emphasis>
+152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>(!<link linkend="main_8c_1a3c5791505a851932128288243c2c70bc">ON_flag</link>[0]){
+153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PORTC&#32;|=&#32;0x08;
+154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="main_8c_1a3c5791505a851932128288243c2c70bc">ON_flag</link>[0]&#32;=&#32;1;
+155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis class="keywordflow">else</emphasis>{
+156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PORTC&#32;&amp;=&#32;~0x08;&#32;
+157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="main_8c_1a3c5791505a851932128288243c2c70bc">ON_flag</link>[0]&#32;=&#32;0;&#32;
+158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+159 
+160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!strcmp(<link linkend="main_8c_1a2c559caab93e83086882bf2a584b5d34">received_str</link>,<emphasis class="stringliteral">&quot;five&quot;</emphasis>)){
+161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+162 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;high&#32;headlights</emphasis>
+163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>(!<link linkend="main_8c_1a3c5791505a851932128288243c2c70bc">ON_flag</link>[1]){
+164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PORTC&#32;|=&#32;0x10;
+165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="main_8c_1a3c5791505a851932128288243c2c70bc">ON_flag</link>[1]&#32;=&#32;1;
+166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis class="keywordflow">else</emphasis>{
+167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PORTC&#32;&amp;=&#32;~0x10;
+168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="main_8c_1a3c5791505a851932128288243c2c70bc">ON_flag</link>[1]&#32;=&#32;0;
+169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+170 
+171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!strcmp(<link linkend="main_8c_1a2c559caab93e83086882bf2a584b5d34">received_str</link>,<emphasis class="stringliteral">&quot;six&quot;</emphasis>)){
+172 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;right&#32;signs</emphasis>
+174 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>(!<link linkend="main_8c_1a3c5791505a851932128288243c2c70bc">ON_flag</link>[2]){
+175 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PORTC&#32;|=&#32;0x20;
+176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="main_8c_1a3c5791505a851932128288243c2c70bc">ON_flag</link>[2]&#32;=&#32;1;
+177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis class="keywordflow">else</emphasis>{
+178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PORTC&#32;&amp;=&#32;~0x20;
+179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="main_8c_1a3c5791505a851932128288243c2c70bc">ON_flag</link>[2]&#32;=&#32;0;
+180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+181 
+182 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!strcmp(<link linkend="main_8c_1a2c559caab93e83086882bf2a584b5d34">received_str</link>,<emphasis class="stringliteral">&quot;seven&quot;</emphasis>)){
+183 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+184 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;left&#32;signs</emphasis>
+185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>(!<link linkend="main_8c_1a3c5791505a851932128288243c2c70bc">ON_flag</link>[3]){
+186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PORTC&#32;|=&#32;0x40;
+187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="main_8c_1a3c5791505a851932128288243c2c70bc">ON_flag</link>[3]&#32;=&#32;1;
+188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis class="keywordflow">else</emphasis>{
+189 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PORTC&#32;&amp;=&#32;~0x40;
+190 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="main_8c_1a3c5791505a851932128288243c2c70bc">ON_flag</link>[3]&#32;=&#32;0;
+191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+192 
+193 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!strcmp(<link linkend="main_8c_1a2c559caab93e83086882bf2a584b5d34">received_str</link>,<emphasis class="stringliteral">&quot;eight&quot;</emphasis>)){
+194 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;waiting&#32;signs</emphasis>
+196 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>(!<link linkend="main_8c_1a3c5791505a851932128288243c2c70bc">ON_flag</link>[4]){
+197 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PORTC&#32;|=&#32;0x80;
+198 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="main_8c_1a3c5791505a851932128288243c2c70bc">ON_flag</link>[4]&#32;=&#32;1;
+199 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis class="keywordflow">else</emphasis>{
+200 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PORTC&#32;&amp;=&#32;~0x80;
+201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="main_8c_1a3c5791505a851932128288243c2c70bc">ON_flag</link>[4]&#32;=&#32;0;
+202 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+203 
+204 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!strcmp(<link linkend="main_8c_1a2c559caab93e83086882bf2a584b5d34">received_str</link>,<emphasis class="stringliteral">&quot;nine&quot;</emphasis>)){
+205 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+206 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;lower&#32;car&#32;roof</emphasis>
+207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>(!<link linkend="main_8c_1a3c5791505a851932128288243c2c70bc">ON_flag</link>[5]){
+208 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PORTD&#32;|=&#32;0x40;
+209 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="main_8c_1a3c5791505a851932128288243c2c70bc">ON_flag</link>[5]&#32;=&#32;1;
+210 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis class="keywordflow">else</emphasis>{
+211 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PORTD&#32;&amp;=&#32;~0x40;
+212 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="main_8c_1a3c5791505a851932128288243c2c70bc">ON_flag</link>[5]&#32;=&#32;0;
+213 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+214 
+215 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!strcmp(<link linkend="main_8c_1a2c559caab93e83086882bf2a584b5d34">received_str</link>,<emphasis class="stringliteral">&quot;ten&quot;</emphasis>)){
+216 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+217 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;raise&#32;car&#32;roof</emphasis>
+218 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>(!<link linkend="main_8c_1a3c5791505a851932128288243c2c70bc">ON_flag</link>[6]){
+219 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PORTD&#32;|=&#32;0x80;
+220 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="main_8c_1a3c5791505a851932128288243c2c70bc">ON_flag</link>[6]&#32;=&#32;1;
+221 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis class="keywordflow">else</emphasis>{
+222 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PORTD&#32;&amp;=&#32;~0x80;
+223 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="main_8c_1a3c5791505a851932128288243c2c70bc">ON_flag</link>[6]&#32;=&#32;0;
+224 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+225 
+226 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis class="keywordflow">else</emphasis>{
+227 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+228 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;receive&#32;slider&#32;position&#32;in&#32;the&#32;app&#32;and&#32;set&#32;speed</emphasis>
+229 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="main_8c_1a1235d2561f8f0911d937e02a0766786a">thumb_position</link>&#32;=&#32;atoi(<link linkend="main_8c_1a2c559caab93e83086882bf2a584b5d34">received_str</link>);
+230 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PORTB&#32;=&#32;(255-<link linkend="main_8c_1a1235d2561f8f0911d937e02a0766786a">thumb_position</link>);
+231 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+232 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}}
+233 &#32;&#32;&#32;&#32;}
+    </computeroutput></literallayout>
+</section>
