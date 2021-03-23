@@ -11,6 +11,7 @@ It is used for the creation of alternating current (AC) waveforms; most commonly
 
 ### System Layout
 System is divided into two separate modules that communicate with each other to acheive the desired output, which are:
+
 #### Pilot Module
 
 Pilot module receives operating parameters from co-pilot (output frequency) and then outputs PWM signals to IGBT bridge, also it checks for current fault signal and in case of current overload it shuts down waiting for a manual reset.
@@ -47,13 +48,13 @@ We used Phase and Frequency correct PWM mode with ICR1 as TOP value as it mimics
 
 Below is the ouput of the system without attaching low pass LC filter:
 
-![SVPWM non-filtered](/Users/Loay/Desktop/SVPWM non-filtered.gif)
+![SVPWM non-filtered](https://user-images.githubusercontent.com/40588058/112097013-fcae1b00-8ba7-11eb-9de0-81aa6ed4a276.gif)
 
 ### Filtered Output
 
 Below is the output of the system with low pass LC filter attached:
 
-![SVPWM filtered](/Users/Loay/Desktop/SVPWM filtered.gif)
+![SVPWM filtered](https://user-images.githubusercontent.com/40588058/112097103-1e0f0700-8ba8-11eb-857c-8ab76146bc39.gif)
 
 ## Built With
 - Atmel Studio 7 - The official AVR IDE
@@ -63,7 +64,6 @@ Below is the output of the system with low pass LC filter attached:
 
 ## Authors
 Loay Ashraf - <loay.ashraf.96@gmail.com>
-
 Mohamed Gamal - <muhammed.gamal051@gmail.com>
 
 ## License
