@@ -18,7 +18,7 @@ Pilot module receives operating parameters from co-pilot (output frequency) and 
 
 #### Co-Pilot Module
 
-Co-Pilot module reads user input via rotary potentiometer for output frequency, current sensor for current overload signal, then sends operating parameters to Pilot module and finally outputs system status (frequency, RPM, current,...etc.) to a charcter LCD.
+Co-Pilot module reads user input via rotary potentiometer for output frequency, current sensor for current overload signal, then sends operating parameters to Pilot module and finally outputs system status (frequency, RPM, current,...etc.) to a character LCD.
 
 ## Discussion
 This section discusses desicions made regarding design and implementation.
@@ -26,7 +26,7 @@ This section discusses desicions made regarding design and implementation.
 ### Microcontroller
 
 1. We opted for ATmega128 for pilot module as it runs at 16MHZ frequency and also has two 16-bit timers each having three output compare pins.
-2. We opted for ATmega32 for co-pilot module as it runs at 16MHZ frequency and has enough pins for interfacing charcter LCD and current sensors via ADC.
+2. We opted for ATmega32 for co-pilot module as it runs at 16MHZ frequency and has enough pins for interfacing character LCD and current sensors via ADC.
 
 ### Communication Protocol
 
